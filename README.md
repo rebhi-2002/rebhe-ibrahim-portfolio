@@ -9,7 +9,7 @@
 <br />
 
 <p align="center">
-  <img src="URL_TO_YOUR_PORTFOLIO_GIF_OR_IMAGE" alt="Portfolio Demo" width="80%">
+  <img src="https://github.com/rebhi-2002/rebhe-ibrahim-portfolio/blob/main/public/PortfolioDemo.png" alt="Portfolio Demo" width="80%">
 </p>
 
 ## About This Project
@@ -47,7 +47,7 @@ To get a local copy up and running, follow these simple steps.
 
 1.  Clone the repo
     ```sh
-    git clone [https://github.com/rebhi-2002/rebhe-ibrahim-portfolio.git](https://github.com/rebhi-2002/rebhe-ibrahim-portfolio.git)
+    git clone https://github.com/rebhi-2002/rebhe-ibrahim-portfolio.git
     ```
 2.  Navigate to the project directory
     ```sh
