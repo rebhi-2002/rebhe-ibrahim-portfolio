@@ -101,7 +101,7 @@ const CoreWebVitalsGuide = () => {
         <ul className="list-disc list-inside space-y-2 text-lg text-gray-300 leading-relaxed">
           <li>
             <strong>Break Up Long Tasks:</strong> Split long-running JavaScript
-            into smaller chunks using `setTimeout` or `requestIdleCallback`.
+            into smaller chunks using `setTimeout\` or `requestIdleCallback`.
           </li>
           <li>
             <strong>Optimize Event Callbacks:</strong> Keep your event handling
@@ -153,7 +153,7 @@ const CoreWebVitalsGuide = () => {
         <ul className="list-disc list-inside space-y-2 text-lg text-gray-300 leading-relaxed">
           <li>
             <strong>Include Dimensions on Images/Videos:</strong> Always provide
-            `width` and `height` attributes.
+            `width\` and `height\` attributes.
           </li>
           <li>
             <strong>Reserve Space for Ads:</strong> If you have ad slots, define
