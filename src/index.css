@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Global styles that are applied to all elements, without modifying their layout or behavior. */
+  /* Examples: font family, font size, line height, text color, background color, etc. */
+}
+
+@layer components {
+  /* Styles that are applied to specific components, such as buttons, inputs, etc. */
+  /* Examples: button styles, input styles, etc. */
+}
+
+@layer utilities {
+  /* Styles that are used to modify the layout or behavior of elements, such as padding, margin, flexbox, etc. */
+  /* Examples: container styles, grid styles, etc. */
+}
+
+@layer overrides {
+  /* Styles that override the default styles of a component or utility. */
+  /* Examples: overriding the default font size of a button, etc. */
+}
+
+@layer custom {
+  /* Custom styles that are not related to any specific component or utility. */
+  /* Examples: custom animation styles, custom scrollbars, etc. */
+}

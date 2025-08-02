@@ -1,0 +1,25 @@
+{
+  "name": "Rebhe Ibrahim - Digital Experience Architect",
+  "short_name": "Rebhe Ibrahim",
+  "description": "Building high-performance web applications that scale, convert, and deliver exceptional user experiences for modern businesses.",
+  "id": "/",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#00A3FF",
+  "background_color": "#1F2937",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/"
+}

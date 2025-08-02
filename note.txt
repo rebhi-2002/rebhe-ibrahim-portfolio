@@ -1,0 +1,326 @@
+npm install react-helmet-async react-router-dom
+
+=====================================
+
+npm install react-helmet react-router-dom
+npm uninstall react-helmet && npm install react-helmet-async
+
+=====================================
+
+https://calendly.com/app/scheduling/meeting_types/user/me
+https://us7.admin.mailchimp.com/audience/contacts/
+
+npm install react-mailchimp-subscribe
+
+=====================================
+
+https://gemini.google.com/u/1/app/f96705e7c4aa9d1a
+https://shots.so
+https://imagecompressor.11zon.com/en/compress-png/
+https://squoosh.app/editor
+
+------------------
+
+PS C:\Users\rebhi\Downloads\PROJECT\Brand> npm run build
+
+> vite-react-typescript-starter@0.0.0 build
+> vite build
+
+vite v5.4.19 building for production...
+✓ 1904 modules transformed.
+dist/index.html                   2.10 kB │ gzip:   0.74 kB
+dist/assets/index-CTLbmrp0.css   25.38 kB │ gzip:   4.97 kB
+dist/assets/index-UwNoIvyu.js   444.97 kB │ gzip: 132.31 kB
+✓ built in 7.14s
+
+=====================================
+
+PS C:\Users\rebhi\Downloads\PROJECT\Brand> npm install -g vercel
+⠸
+added 235 packages in 1m
+
+26 packages are looking for funding
+  run `npm fund` for details
+PS C:\Users\rebhi\Downloads\PROJECT\Brand> 
+
+=====================================
+
+PS C:\Users\rebhi\Downloads\PROJECT\Brand> vercel login
+Vercel CLI 44.5.0
+> NOTE: The Vercel CLI now collects telemetry regarding usage of the CLI.
+> This information is used to shape the CLI roadmap and prioritize features.
+> You can learn more, including how to opt-out if you'd not like to participate in this program, by visiting the following URL:
+> https://vercel.com/docs/cli/about-telemetry
+? Log in to Vercel (Use arrow keys)
+> Continue with GitHub
+  Continue with Google
+  Continue with GitLab
+  Continue with Bitbucket
+  Continue with Email
+  Continue with SAML Single Sign-On
+ ─────────────────────────────────
+
+
+=====================================
+
+Vercel CLI Login Success
+Vercel CLI was successfully authenticated as: rebheibrahim@gmail.com
+
+You can now close this tab and return to the CLI.
+
+https://vercel.com/notifications/cli-login-success?email=rebheibrahim%40gmail.com
+
+=====================================
+
+> This information is used to shape the CLI roadmap and prioritize features.
+> You can learn more, including how to opt-out if you'd not like to participate in this program, by visiting the following URL:
+> https://vercel.com/docs/cli/about-telemetry
+? Log in to Vercel (Use arrow keys)
+> Continue with GitHub
+  Continue with Google
+? Log in to Vercel Continue with GitHub
+> Success! GitHub authentication complete for rebheibrahim@gmail.com
+Congratulations! You are now logged in. In order to deploy something, run `vercel`.
+💡  Connect your Git Repositories to deploy every branch push automatically (https://vercel.link/git).
+PS C:\Users\rebhi\Downloads\PROJECT\Brand>
+
+=====================================
+
+PS C:\Users\rebhi\Downloads\PROJECT\Brand> vercel
+Vercel CLI 44.5.0
+? Set up and deploy “~\Downloads\PROJECT\Brand”? yes
+? Which scope should contain your project? rebhi-2002's projects
+? Link to existing project? no
+? What’s your project’s name? rebhe-ibrahim-portfolio
+? In which directory is your code located? ./
+Local settings detected in vercel.json:
+Auto-detected Project Settings (Vite):
+- Build Command: vite build
+- Development Command: vite --port $PORT
+- Install Command: `yarn install`, `pnpm install`, `npm install`, or `bun install`
+- Output Directory: dist
+? Want to modify these settings? no
+? Want to use the default Deployment Protection settings? (Vercel Authentication: Standard Protection) no
+? What setting do you want to use for Vercel Authentication? none
+🔗  Linked to rebhi-2002s-projects/rebhe-ibrahim-portfolio (created .vercel and added it to .gitignore)
+🔍  Inspect: https://vercel.com/rebhi-2002s-projects/rebhe-ibrahim-portfolio/5D8QWs8QZFddis9uf8HB54BHznwb [9s]
+✅  Production: https://rebhe-ibrahim-portfolio-9ojiynhh1-rebhi-2002s-projects.vercel.app [9s]
+2025-07-18T18:52:42.718Z  Running build in Washington, D.C., USA (East) – iad1
+2025-07-18T18:52:42.718Z  Build machine configuration: 2 cores, 8 GB
+2025-07-18T18:52:42.734Z  Retrieving list of deployment files...
+2025-07-18T18:52:42.903Z  Previous build caches not available
+2025-07-18T18:52:43.077Z  Downloading 47 deployment files...
+2025-07-18T18:52:45.333Z  Running "vercel build"
+2025-07-18T18:52:46.066Z  Vercel CLI 44.4.3
+2025-07-18T18:52:46.691Z  Installing dependencies...
+2025-07-18T18:52:51.835Z
+2025-07-18T18:52:51.836Z  added 288 packages in 5s
+2025-07-18T18:52:51.839Z
+2025-07-18T18:52:51.839Z  70 packages are looking for funding
+2025-07-18T18:52:51.839Z    run `npm fund` for details
+2025-07-18T18:52:51.905Z  Running "npm run build"
+2025-07-18T18:52:52.036Z
+2025-07-18T18:52:52.037Z  > vite-react-typescript-starter@0.0.0 build
+2025-07-18T18:52:52.037Z  > vite build
+2025-07-18T18:52:52.037Z
+2025-07-18T18:52:52.406Z  vite v5.4.19 building for production...
+2025-07-18T18:52:52.476Z  transforming...
+2025-07-18T18:52:56.452Z  ✓ 1904 modules transformed.
+2025-07-18T18:52:56.788Z  rendering chunks...
+2025-07-18T18:52:56.798Z  computing gzip size...
+2025-07-18T18:52:56.816Z  dist/index.html                   2.10 kB │ gzip:   0.74 kB
+2025-07-18T18:52:56.817Z  dist/assets/index-CTLbmrp0.css   25.38 kB │ gzip:   4.97 kB
+2025-07-18T18:52:56.817Z  dist/assets/index-UwNoIvyu.js   444.97 kB │ gzip: 132.31 kB
+2025-07-18T18:52:56.817Z  ✓ built in 4.37s
+2025-07-18T18:52:56.917Z  Build Completed in /vercel/output [10s]
+2025-07-18T18:52:56.938Z  Deploying outputs...
+2025-07-18T18:52:57.980Z  
+2025-07-18T18:52:58.137Z  Deployment completed
+📝  Deployed to production. Run `vercel --prod` to overwrite later (https://vercel.link/2F).
+💡  To change the domain or build command, go to https://vercel.com/rebhi-2002s-projects/rebhe-ibrahim-portfolio/settings
+PS C:\Users\rebhi\Downloads\PROJECT\Brand> 
+
+=====================================
+
+PS C:\Users\rebhi\Downloads\PROJECT\Brand> vercel --prod
+Vercel CLI 44.5.0
+🔍  Inspect: https://vercel.com/rebhi-2002s-projects/rebhe-ibrahim-portfolio/8kQqpqEnhbuhK8zbrm7Y81f4BGmR [3s]        
+✅  Production: https://rebhe-ibrahim-portfolio-2rx0cc8rh-rebhi-2002s-projects.vercel.app [3s]
+2025-07-18T19:00:46.865Z  Running build in Washington, D.C., USA (East) – iad1
+2025-07-18T19:00:46.866Z  Build machine configuration: 2 cores, 8 GB
+2025-07-18T19:00:46.880Z  Retrieving list of deployment files...
+2025-07-18T19:00:47.215Z  Downloading 47 deployment files...
+2025-07-18T19:00:47.915Z  Restored build cache from previous deployment (5D8QWs8QZFddis9uf8HB54BHznwb)
+2025-07-18T19:00:49.924Z  Running "vercel build"
+2025-07-18T19:00:50.405Z  Vercel CLI 44.4.3
+2025-07-18T19:00:51.018Z  Installing dependencies...
+2025-07-18T19:00:52.183Z  
+2025-07-18T19:00:52.184Z  up to date in 903ms
+2025-07-18T19:00:52.184Z  
+2025-07-18T19:00:52.184Z  70 packages are looking for funding
+2025-07-18T19:00:52.185Z    run `npm fund` for details
+2025-07-18T19:00:52.218Z  Running "npm run build"
+2025-07-18T19:00:52.558Z
+2025-07-18T19:00:52.560Z  > vite-react-typescript-starter@0.0.0 build
+2025-07-18T19:00:52.561Z  > vite build
+2025-07-18T19:00:52.561Z
+2025-07-18T19:00:52.862Z  vite v5.4.19 building for production...
+2025-07-18T19:00:53.213Z  transforming...
+PS C:\Users\rebhi\Downloads\PROJECT\Brand> 
+
+=====================================
+
+npm install @formspree/react
+
+https://realfavicongenerator.net/logo-maker
+npx realfavicon check <port>
+
+==========================================================================
+==========================================================================
+==========================================================================
+
+https://gemini.google.com/u/1/app/19ad298c033d734e
+https://us7.admin.mailchimp.com/audience/contacts/
+https://formspree.io/forms/mnnzjygd/submissions
+https://realfavicongenerator.net/logo-maker/your-favicon-is-ready
+https://vercel.com/rebhi-2002s-projects
+
+==========================================================================
+
+تنزلش حاجة هين, ابحث قبل لانو فيهم مشاكل!!
+============================================
+============================================
+
+npm install react-markdown
+
+npm create vite@latest my-blog --template react-ts
+cd my-blog
+
+npm install @mdx-js/react @vitejs/plugin-react vite-plugin-mdx
+npm uninstall vite-plugin-mdx
+npm install @mdx-js/rollup @mdx-js/react
+
+---
+لأن @vitejs/plugin-react-mdx غير موجود رسميًا، إنما يتم دعم MDX في Vite من خلال:
+@mdx-js/rollup ⬅️ هذا هو الـ plugin الفعلي المستخدم داخل Vite.
+مع تكامله داخل ملف vite.config.ts
+---
+
+npm install @mdx-js/rollup @mdx-js/react
+npm install unified remark remark-parse remark-stringify vfile
+
+npm install unified vfile remark remark-parse remark-stringify
+
+
+npm uninstall vite-plugin-mdx
+npm install @mdx-js/rollup @mdx-js/react
+
+============================================
+============================================
+
+npm install prismjs
+
+import 'prismjs/themes/prism.css'; // أو prism-tomorrow.css لتنسيق داكن
+import Prism from 'prismjs';
+import 'prismjs/components/prism-jsx'; // للـ jsx
+
+
+C:\Users\rebhi\Downloads\PROJECT\Brand>npm install html-react-parser
+
+added 10 packages, and audited 388 packages in 9s
+
+143 packages are looking for funding
+  run `npm fund` for details
+
+2 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+C:\Users\rebhi\Downloads\PROJECT\Brand> npm i --save-dev @types/prismjs
+
+npm install html-react-parser
+
+npm install jsdom turndown
+npm install react-markdown gray-matter rehype-highlight
+npm i --save-dev @types/jsdom
+npm i --save-dev @types/turndown
+
+npm install -D ts-node
+npx ts-node convertJsonToMarkdown.ts
+
+
+PS C:\Users\rebhi\Downloads\PROJECT\Brand> node convertJsonToMarkdown.cjs
+>> 
+✅ Markdown file created: ./mastering-react-performance-2024.mdx
+PS C:\Users\rebhi\Downloads\PROJECT\Brand> 
+
+npm install @mdx-js/react @mdx-js/loader --save-dev
+npm install @mdx-js/esbuild @mdx-js/react
+npm install @mdx-js/rollup @mdx-js/react
+
+كيف احذف:
+"@mdx-js/esbuild": "^3.1.0",
+"@mdx-js/rollup": "^3.1.0",
+"react-markdown": "^10.1.0",
+"react-helmet": "^6.1.0",
+"prismjs": "^1.30.0",
+"gray-matter": "^4.0.3",
+"rehype-highlight": "^7.0.2",
+"html-react-parser": "^5.2.6",
+"@mdx-js/loader": "^3.1.0",
+"@mdx-js/react": "^3.1.0",
+"@types/jsdom": "^21.1.7",
+"@types/prismjs": "^1.26.5",
+"@types/turndown": "^5.0.5",
+"@types/vfile": "^3.0.2",
+
+هذه الحزم ليست أساسية لعمل مشروع React نفسه، بل هي إضافات (add-ons) لتوفير ميزات محددة. طالما أنك حذفت الملفات أو المكونات التي كانت تستخدم هذه الحزم، فإن حذفها من المشروع آمن تمامًا ولن يسبب أي مشاكل.
+
+تفصيل سريع لهذه الحزم:
+حزم MDX و react-markdown و html-react-parser: كانت تستخدم لعرض محتوى المقالات المكتوبة بصيغة Markdown أو لتحويل نص HTML إلى مكونات React. إذا كنت الآن تعرض البيانات من ملف JSON مباشرة، فلم تعد بحاجة إليها.
+
+حزمة prismjs و rehype-highlight: كانت لتلوين وتمييز أكواد البرمجة (Syntax Highlighting) داخل المقالات.
+
+حزمة react-helmet: كانت لتحسين محركات البحث (SEO) عن طريق التحكم في عنوان الصفحة والوصف في الـ head.
+
+حزم @types/*: هي مجرد ملفات تعريف لـ TypeScript لمساعدة المحرر في فهم هذه الحزم. لا تؤثر على عمل التطبيق النهائي.
+
+باختصار، قرارك بحذفها سليم 100% 👍. هذا سيقلل من حجم المشروع ويسرّع من عملية تثبيت الحزم (npm install).
+
+
+npm install prismjs react-markdown @types/prismjs html-react-parser
+npm install @tailwindcss/typography
+npm install -D @tailwindcss/typography
+
+npm install reading-time html-to-text
+npm install -D @types/html-to-text
+
+npm install react-compare-slider
+
+
+╭──────────────────────────────────────────────────────────╮
+│                                                          │
+│           Update available! v44.5.0 ≫ v44.6.4            │
+│   Changelog: https://github.com/vercel/vercel/releases   │
+│         Run `npm i -g vercel@latest` to update.          │
+│                                                          │
+╰──────────────────────────────────────────────────────────╯
+
+PS D:\Project\Brand>
+
+PS D:\Project\Brand> npm i -g vercel@latest
+npm warn deprecated path-match@1.2.4: This package is archived and no longer maintained. For support, visit https://github.com/expressjs/express/discussions
+
+added 1 package, and changed 235 packages in 2m
+
+26 packages are looking for funding
+  run `npm fund` for details
+npm notice
+npm notice New minor version of npm available! 11.0.0 -> 11.5.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.5.1
+npm notice To update run: npm install -g npm@11.5.1
+npm notice
+PS D:\Project\Brand> 
