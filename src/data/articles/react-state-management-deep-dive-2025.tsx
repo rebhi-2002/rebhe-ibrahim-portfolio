@@ -1,26 +1,8 @@
 // src/data/articles/react-state-management-deep-dive-2025.tsx
 
-import React from "react";
-import { CheckCircle } from "lucide-react";
 import TableOfContents from "../../components/TableOfContents";
 import CodeBlock from "../../components/CodeBlock";
-
-// مكونات احترافية لعرض الإيجابيات والسلبيات
-const ProsCard = ({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) => (
-  <div className="my-4 rounded-lg border border-green-500/30 bg-green-500/10 p-4">
-    <div className="flex items-center gap-3">
-      <CheckCircle className="h-6 w-6 flex-shrink-0 text-green-400" />
-      <h4 className="font-bold text-lg my-2 text-green-300">{title}</h4>
-    </div>
-    <div className="mt-2 pl-9 text-green-200/80">{children}</div>
-  </div>
-);
+import { ProsCard } from "../../components/ArticleCallouts";
 
 const tocHeadings = [
   { id: "intro", title: "Introduction: The Challenge of State" },

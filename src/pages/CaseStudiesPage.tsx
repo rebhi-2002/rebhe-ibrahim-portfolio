@@ -429,9 +429,9 @@ const CaseStudiesPage = () => {
       <SeoComponent
         title="Case Studies - Digital Experience Projects"
         description="Explore detailed case studies of successful web development projects including e-commerce platforms, SaaS dashboards, and mobile applications."
-        keywords="Case Studies, Web Development Projects, E-Commerce Development, SaaS Development, Mobile App Development"
+        keywords="Case Studies, Web Development Projects, E-Commerce Development, SaaS Development, Mobile App Development, Rebhe Ibrahim Portfolio"
         schemaType="WebSite"
-        ogImageUrl="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        ogImageUrl="/images/about/rebhe-ibrahim-web-developer.png"
       />
       <motion.div
         initial="initial"

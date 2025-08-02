@@ -1,17 +1,8 @@
 // src/data/articles/javascript-es2025.tsx
 
-import React from "react";
-import { Info } from "lucide-react";
 import TableOfContents from "../../components/TableOfContents";
 import CodeBlock from "../../components/CodeBlock";
-
-// مكون إضافي احترافي لعرض الملاحظات المهمة داخل المقال
-const InfoBox = ({ children }: { children: React.ReactNode }) => (
-  <div className="my-6 flex items-start gap-4 rounded-lg border border-blue-500/30 bg-blue-500/10 p-4">
-    <Info className="h-5 w-5 flex-shrink-0 text-blue-400 mt-1" />
-    <div className="text-sm text-blue-200">{children}</div>
-  </div>
-);
+import { InfoBox } from "../../components/ArticleCallouts";
 
 const tocHeadings = [
   { id: "intro", title: "How JavaScript Evolves" },

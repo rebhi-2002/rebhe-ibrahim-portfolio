@@ -13,64 +13,7 @@ import {
 } from "lucide-react";
 
 import SeoComponent from "../components/SeoComponent";
-// import { useForm } from "react-hook-form";
-
-// Toast: Reusable popup notification for success/error feedback
-const Toast = ({
-  type,
-  message,
-  onClose,
-}: {
-  type: "success" | "error";
-  message: string;
-  onClose: () => void;
-}) => (
-  <div
-    className={`fixed top-6 left-1/2 z-50 -translate-x-1/2 flex items-center gap-3 px-6 py-3 rounded-lg shadow-lg border transition-all animate-fade-in ${
-      type === "success"
-        ? "bg-green-800/90 border-green-500 text-green-100"
-        : "bg-red-900/90 border-red-500 text-red-100"
-    }`}
-    role="alert"
-  >
-    {type === "success" ? (
-      <svg
-        className="h-5 w-5 text-green-300"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M5 13l4 4L19 7"
-        />
-      </svg>
-    ) : (
-      <svg
-        className="h-5 w-5 text-red-300"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M6 18L18 6M6 6l12 12"
-        />
-      </svg>
-    )}
-    <span className="font-medium">{message}</span>
-    <button
-      onClick={onClose}
-      className="ml-3 text-xs text-white/70 hover:text-white focus:outline-none"
-    >
-      ✕
-    </button>
-  </div>
-);
+import Toast from "../components/Toast";
 
 const ContactPage = () => {
   // استخراج دالة إعادة التعيين من useForm
@@ -164,15 +107,6 @@ const ContactPage = () => {
     }
   }, [state.succeeded, state.errors, resetFormspree]); // Keep state.errors here to show server-side errors
 
-  useEffect(() => {
-    if (toast) {
-      const timer = setTimeout(() => {
-        setToast(null);
-      }, 5000); // The toast will disappear after 5 seconds
-      return () => clearTimeout(timer);
-    }
-  }, [toast]);
-
   const contactMethods = [
     {
       icon: Mail,
@@ -186,8 +120,7 @@ const ContactPage = () => {
       title: "Schedule a Call",
       description: "Book a free 30-minute consultation",
       action: "Book Now",
-      // link: "https://calendly.com/rebheibrahim/30min?background_color=1A252F&text_color=FFFFFF&primary_color=00A3FF",
-      link: null, // <-- تم التعديل هنا، سنستخدم onClick بدلاً من الرابط
+      link: null,
     },
     {
       icon: MessageCircle,
@@ -211,38 +144,34 @@ const ContactPage = () => {
     {
       question: "What is the typical project timeline?", // "What is your typical project timeline?",
       answer:
-        // "Project timelines vary depending on scope and complexity. Simple websites typically take 2-4 weeks, while complex web applications can take 8-16 weeks. I provide detailed timelines during our initial consultation.",
         "Project timelines vary based on scope and complexity. A standard website may take 2-4 weeks, while complex web applications can range from 8-16 weeks. A detailed, custom timeline is provided after our initial consultation.",
     },
     {
       question: "Do you work with international clients?",
       answer:
-        // "Absolutely! I work with clients worldwide and am comfortable collaborating across different time zones. Most of my communication happens via email, video calls, and project management tools.",
         "Absolutely. We collaborate with clients worldwide and are adept at working across different time zones through clear communication via email, video calls, and project management tools.",
     },
     {
       question: "What is included in the development process?", // "What is included in your development process?",
       answer:
-        // "The development process is comprehensive and includes discovery and planning, UI/UX design, development, testing, deployment, and post-launch support. I provide regular updates and involve you in key decisions throughout the project.",
         "Our process is comprehensive, including discovery, UI/UX design, development, testing, deployment, and post-launch support. We ensure clients are involved in key decisions throughout the project lifecycle.",
     },
     {
       question: "Is ongoing maintenance provided?", // "Do you provide ongoing maintenance?",
       answer:
-        // "Yes, I offer ongoing maintenance packages that include security updates, performance optimization, content updates, and technical support. We can discuss the best plan for your needs.",
         "Yes, we offer ongoing maintenance packages that include security updates, performance optimization, content updates, and technical support. We can discuss a plan tailored to your specific needs.",
     },
   ];
 
   return (
     <>
-      {toast && <Toast {...toast} onClose={() => setToast(null)} />}
+      {toast && <Toast {...toast} onClose={() => setToast(null)} autoClose={true} />}
       <SeoComponent
         title="Contact - Let's Build Something Amazing Together"
         description="Ready to transform your digital presence? Get in touch to discuss your project and discover how we can bring your vision to life."
         keywords="Contact Rebhe Ibrahim, Web Development Consultation, Project Inquiry, Digital Experience Architect"
         schemaType="WebSite"
-        ogImageUrl="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        ogImageUrl="/images/about/rebhe-ibrahim-web-developer.png"
       />
       <motion.div
         initial="initial"
@@ -300,7 +229,6 @@ const ContactPage = () => {
                   <h3 className="text-xl font-bold mb-2">{method.title}</h3>
                   <p className="text-gray-400 mb-6">{method.description}</p>
                   {method.title === "Schedule a Call" ? (
-                    // إذا كان زر Calendly، استخدم onClick
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -309,7 +237,6 @@ const ContactPage = () => {
                         event.preventDefault();
                         if (window.Calendly) {
                           window.Calendly.showPopupWidget(
-                            // "https://calendly.com/rebheibrahim/30min"
                             "https://calendly.com/rebheibrahim/30min?background_color=1A252F&text_color=FFFFFF&primary_color=00A3FF"
                           );
                         }
@@ -318,7 +245,6 @@ const ContactPage = () => {
                       {method.action}
                     </motion.button>
                   ) : (
-                    // للأزرار الأخرى، استخدم الرابط العادي
                     <motion.a
                       href={method.link ?? undefined}
                       whileHover={{ scale: 1.05 }}
@@ -648,7 +574,6 @@ const ContactPage = () => {
               </h2>
               <p className="text-xl text-gray-400">
                 Quick answers to common questions about the process.{" "}
-                {/* about working with me */}
               </p>
             </motion.div>
 

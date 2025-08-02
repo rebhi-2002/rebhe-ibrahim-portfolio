@@ -88,9 +88,9 @@ const AboutPage = () => {
       <SeoComponent
         title="About Rebhe Ibrahim"
         description="Learn about my journey as a Digital Experience Architect, my passion for clean code, and how I help businesses transform their digital presence."
-        keywords="About Rebhe Ibrahim, Digital Experience Architect, Web Developer Background, Full-Stack Developer"
+        keywords="About Rebhe Ibrahim, Digital Experience Architect, Web Developer Background, Full-Stack Developer, React Developer, TypeScript"
         schemaType="Person"
-        ogImageUrl="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        ogImageUrl="/images/about/rebhe-ibrahim-web-developer.png"
       />
       <motion.div
         initial="initial"

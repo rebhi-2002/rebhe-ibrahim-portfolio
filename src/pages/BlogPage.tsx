@@ -276,10 +276,9 @@ const BlogPage = () => {
       <SeoComponent
         title="Blog - Web Development Insights & Knowledge"
         description="Deep dives into web development, performance optimization, and digital strategy. Sharing insights from building exceptional digital experiences."
-        keywords="Web Development Blog, React Tutorials, Performance Optimization, JavaScript, Frontend Development"
+        keywords="Web Development Blog, React Tutorials, Performance Optimization, JavaScript, Frontend Development, Rebhe Ibrahim Blog"
         schemaType="WebSite"
-        ogImageUrl="https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?auto=compress&cs=tinysrgb&w=1200"
-        // ogImageUrl="https://YOUR_DOMAIN.com/og-blog-image.jpg" // **مهم:** استبدل هذه الصورة
+        ogImageUrl="/images/about/rebhe-ibrahim-web-developer.png"
       />
       <motion.div
         initial="initial"

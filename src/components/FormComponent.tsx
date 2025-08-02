@@ -1,64 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
-
-// Toast: Reusable popup notification for success/error feedback
-// Appears at the top center and auto-dismisses after 4 seconds
-const Toast = ({
-  type,
-  message,
-  onClose,
-}: {
-  type: "success" | "error";
-  message: string;
-  onClose: () => void;
-}) => (
-  <div
-    className={`fixed top-6 left-1/2 z-50 -translate-x-1/2 flex items-center gap-3 px-6 py-3 rounded-lg shadow-lg border transition-all animate-fade-in ${
-      type === "success"
-        ? "bg-green-800/90 border-green-500 text-green-100"
-        : "bg-red-900/90 border-red-500 text-red-100"
-    }`}
-    role="alert"
-  >
-    {type === "success" ? (
-      <svg
-        className="h-5 w-5 text-green-300"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M5 13l4 4L19 7"
-        />
-      </svg>
-    ) : (
-      <svg
-        className="h-5 w-5 text-red-300"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M6 18L18 6M6 6l12 12"
-        />
-      </svg>
-    )}
-    <span className="font-medium">{message}</span>
-    <button
-      onClick={onClose}
-      className="ml-3 text-xs text-white/70 hover:text-white focus:outline-none"
-    >
-      ✕
-    </button>
-  </div>
-);
+import Toast from "./Toast";
 
 // The actual form component that will be rendered by the library
 // Props for the CustomForm component (render-prop child of MailchimpSubscribe)
@@ -127,14 +70,6 @@ const CustomForm: React.FC<CustomFormProps> = ({
     }
   }, [status, message]);
 
-  // Auto-dismiss the toast notification after a delay
-  useEffect(() => {
-    if (toast) {
-      const timer = setTimeout(() => setToast(null), 4000);
-      return () => clearTimeout(timer);
-    }
-  }, [toast]);
-
   // If submission is successful, show a thank you message instead of the form
   if (status === "success") {
     return (
@@ -173,7 +108,7 @@ const CustomForm: React.FC<CustomFormProps> = ({
   return (
     <div className="relative">
       {/* Toast notification for user feedback */}
-      {toast && <Toast {...toast} onClose={() => setToast(null)} />}
+      {toast && <Toast {...toast} onClose={() => setToast(null)} autoClose={true} />}
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* First Name input (optional, sent to Mailchimp as FNAME) */}
         <input

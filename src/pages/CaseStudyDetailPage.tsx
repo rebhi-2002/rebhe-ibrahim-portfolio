@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 
 import SeoComponent from "../components/SeoComponent";
+import SectionImageDisplay from "../components/SectionImageDisplay";
 import { projects } from "../data/projects";
 
 import {
@@ -30,7 +31,6 @@ import {
 
 const getIconForMetric = (metric: string) => {
   const lower = metric.toLowerCase();
-  // تم تغيير لون الأيقونات إلى الأزرق ليتناسب مع الهوية الجديدة
   const iconClass = "h-8 w-8 mx-auto mb-4 text-blue-400";
 
   if (lower.includes("user") || lower.includes("engagement"))
@@ -87,9 +87,9 @@ const CaseStudyDetailPage = () => {
             }
             return [];
           }),
-        ].filter(Boolean) as string[]; // Cast to string[] after filtering out null/undefined
+        ].filter(Boolean) as string[];
 
-        setAllImages(images); // This line was causing the error
+        setAllImages(images);
       }
       setLoading(false);
     }, 300);
@@ -164,317 +164,6 @@ const CaseStudyDetailPage = () => {
       </div>
     );
   }
-
-  // // مكون جديد لعرض الصور بذكاء
-  // const SectionImageDisplay = ({
-  //   image,
-  //   title,
-  //   openLightbox,
-  // }: {
-  //   image: string | { desktop: string; mobile: string };
-  //   title: string;
-  //   openLightbox: (imageUrl: string) => void;
-  // }) => {
-  //   // --- الحالة الأولى: إذا كانت البيانات عبارة عن كائن (يحتوي على صورة للجوال والحاسوب) ---
-  //   if (
-  //     typeof image === "object" &&
-  //     image !== null &&
-  //     image.desktop &&
-  //     image.mobile
-  //   ) {
-  //     return (
-  //       // نعرض الصورتين جنبًا إلى جنب
-  //       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-  //         {/* صورة الحاسوب */}
-  //         <div
-  //           className="relative overflow-hidden rounded-xl cursor-pointer group"
-  //           onClick={() => openLightbox(image.desktop)}
-  //         >
-  //           <img
-  //             src={image.desktop}
-  //             alt={`${title} - Desktop`}
-  //             className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
-  //           />
-  //           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100" />
-  //         </div>
-  //         {/* صورة الجوال */}
-  //         <div
-  //           className="relative overflow-hidden rounded-xl cursor-pointer group"
-  //           onClick={() => openLightbox(image.mobile)}
-  //         >
-  //           <img
-  //             src={image.mobile}
-  //             alt={`${title} - Mobile`}
-  //             className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
-  //           />
-  //           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100" />
-  //         </div>
-  //       </div>
-  //     );
-  //   }
-
-  //   // --- الحالة الثانية: إذا كانت البيانات نصًا عاديًا (صورة واحدة فقط) ---
-  //   if (typeof image === "string") {
-  //     return (
-  //       <div
-  //         className="relative overflow-hidden rounded-xl cursor-pointer group"
-  //         onClick={() => openLightbox(image)}
-  //       >
-  //         <img
-  //           src={image}
-  //           alt={title || ""}
-  //           className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
-  //         />
-  //         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100" />
-  //       </div>
-  //     );
-  //   }
-
-  //   // في حال لم تكن هناك صورة
-  //   return null;
-  // };
-
-  // ----------------------------------------------------------------
-  //  SectionImageDisplay Component
-  //  A smart component to display media (video, image slider, or single image)
-  //  for a case study section.
-  // ----------------------------------------------------------------
-
-  // // 1. استيراد المكتبات اللازمة
-  // import {
-  //   ReactCompareSlider,
-  //   ReactCompareSliderImage,
-  // } from "react-compare-slider";
-  // import { motion } from "framer-motion";
-  // import { ArrowRightLeft } from "lucide-react"; // تأكد من استيراد الأيقونة
-
-  // 2. تعريف المكون والخصائص (Props) التي يستقبلها
-  const SectionImageDisplay = ({
-    section,
-    openLightbox,
-  }: {
-    section: {
-      title: string;
-      // `image` يمكن أن يكون نصًا أو كائنًا للمقارنة
-      image: string | { desktop: string; mobile: string };
-      // `videoSrc` هو حقل اختياري للفيديو
-      videoSrc?: string;
-    };
-    openLightbox: (imageUrl: string) => void;
-  }) => {
-    // استخراج المتغيرات من "القسم" لسهولة الاستخدام
-    const { image, title, videoSrc } = section;
-
-    // --- الأولوية الأولى: التحقق من وجود فيديو ---
-    // إذا كان حقل `videoSrc` موجودًا، سيتم عرض الفيديو دائمًا.
-    if (videoSrc) {
-      return (
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="relative overflow-hidden rounded-xl shadow-lg"
-        >
-          <video
-            src={videoSrc}
-            autoPlay
-            loop
-            muted
-            playsInline // مهم ليعمل على أجهزة أبل
-            className="w-full h-80 object-cover"
-          />
-        </motion.div>
-      );
-    }
-
-    // --- الأولوية الثانية: إذا لم يكن هناك فيديو، تحقق من وجود شريط مقارنة ---
-    if (typeof image === "object" && image.desktop && image.mobile) {
-      return (
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          <h4 className="text-xl font-bold mb-4">Desktop vs. Mobile View</h4>
-          <div className="relative rounded-xl overflow-hidden shadow-2xl">
-            <ReactCompareSlider
-              handle={
-                <motion.div
-                  whileHover={{ scale: 1.15 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="
-                  w-12 h-12 rounded-full 
-                  flex justify-center items-center
-                  bg-blue-500 text-white  
-                  border-2 border-white 
-                  shadow-lg cursor-grab
-                "
-                >
-                  <ArrowRightLeft size={24} />
-                </motion.div>
-              }
-              itemOne={
-                <ReactCompareSliderImage
-                  src={image.desktop}
-                  alt={`${title} - Desktop`}
-                />
-              }
-              itemTwo={
-                <ReactCompareSliderImage
-                  src={image.mobile}
-                  alt={`${title} - Mobile`}
-                />
-              }
-              style={{ height: "400px" }}
-            />
-            <div className="absolute top-4 left-4 bg-black/60 text-white text-xs font-bold py-1 px-3 rounded-full pointer-events-none font-inter">
-              DESKTOP
-            </div>
-            <div className="absolute top-4 right-4 bg-black/60 text-white text-xs font-bold py-1 px-3 rounded-full pointer-events-none font-inter">
-              MOBILE
-            </div>
-          </div>
-        </motion.div>
-      );
-    }
-
-    // --- الحالة الافتراضية: إذا لم يكن هناك فيديو أو شريط مقارنة، اعرض الصورة الواحدة ---
-    if (typeof image === "string") {
-      return (
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="relative overflow-hidden rounded-xl cursor-pointer group"
-          onClick={() => openLightbox(image)}
-        >
-          <img
-            src={image}
-            alt={title || ""}
-            className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100" />
-        </motion.div>
-      );
-    }
-
-    // في حال لم تكن هناك أي وسائط للعرض
-    return null;
-  };
-
-  // لا تنسَ تصدير المكون إذا كان في ملف منفصل
-  // export default SectionImageDisplay;
-
-  // const SectionImageDisplay = ({
-  //   image,
-  //   title,
-  //   openLightbox,
-  // }: {
-  //   image: string | { desktop: string; mobile: string };
-  //   title: string;
-  //   openLightbox: (imageUrl: string) => void;
-  // }) => {
-  //   // --- الحالة الأولى: عرض شريط المقارنة التفاعلي (صورتان) ---
-  //   if (
-  //     typeof image === "object" &&
-  //     image !== null &&
-  //     image.desktop &&
-  //     image.mobile
-  //   ) {
-  //     return (
-  //       // حاوية الحركة: لجعل القسم يظهر بشكل ناعم عند التمرير إليه
-  //       <motion.div
-  //         initial={{ opacity: 0, y: 40 }}
-  //         whileInView={{ opacity: 1, y: 0 }}
-  //         viewport={{ once: true }}
-  //         transition={{ duration: 0.8 }}
-  //         className="text-center" // لتوسيط العنوان
-  //       >
-  //         {/* عنوان توضيحي: لإعطاء سياق للمستخدم */}
-  //         <h4 className="text-xl font-bold mb-4">Desktop vs. Mobile View</h4>
-
-  //         {/* الحاوية الرئيسية: نستخدمها لوضع الوسوم فوق شريط المقارنة */}
-  //         <div className="relative rounded-xl overflow-hidden shadow-2xl">
-  //           <ReactCompareSlider
-  //             // مقبض السحب المخصص: لتحسين التصميم وجعله متوافقًا مع العلامة التجارية
-  //             handle={
-  //               // استخدام motion.div لإضافة تفاعل للمقبض
-  //               <motion.div
-  //                 whileHover={{ scale: 1.15 }} // يكبر حجمه عند مرور الماوس
-  //                 whileTap={{ scale: 0.95 }} // يصغر حجمه عند الضغط
-  //                 // استخدم كلاسات Tailwind CSS لسهولة التخصيص
-  //                 className="
-  //                 w-12 h-12 rounded-full
-  //                 flex justify-center items-center
-  //                  bg-blue-500 text-white
-  //                 border-2 border-white
-  //                 shadow-lg cursor-grab
-  //               "
-  //                 // 💡 نصيحة: استبدل "bg-cyan-500" بلون علامتك التجارية الأساسي
-  //               >
-  //                 <ArrowRightLeft size={24} />
-  //               </motion.div>
-  //             }
-  //             // الصورة الأولى (اليسار)
-  //             itemOne={
-  //               <ReactCompareSliderImage
-  //                 src={image.desktop}
-  //                 alt={`${title} - Desktop`}
-  //               />
-  //             }
-  //             // الصورة الثانية (اليمين)
-  //             itemTwo={
-  //               <ReactCompareSliderImage
-  //                 src={image.mobile}
-  //                 alt={`${title} - Mobile`}
-  //               />
-  //             }
-  //             style={{ height: "400px" }} // يمكنك تعديل الارتفاع حسب الحاجة
-  //           />
-
-  //           {/* وسوم التوضيح: لوضع ملصقات "DESKTOP" و "MOBILE" */}
-  //           <div className="absolute top-4 left-4 bg-black/60 text-white text-xs font-bold py-1 px-3 rounded-full pointer-events-none font-inter">
-  //             {/* 💡 نصيحة: تأكد من أن "font-sans" هو نفس خط مشروعك */}
-  //             DESKTOP
-  //           </div>
-  //           <div className="absolute top-4 right-4 bg-black/60 text-white text-xs font-bold py-1 px-3 rounded-full pointer-events-none font-inter">
-  //             {/* 💡 نصيحة: تأكد من أن "font-sans" هو نفس خط مشروعك */}
-  //             MOBILE
-  //           </div>
-  //         </div>
-  //       </motion.div>
-  //     );
-  //   }
-
-  //   // --- الحالة الثانية: عرض الصورة الواحدة التقليدية ---
-  //   if (typeof image === "string") {
-  //     return (
-  //       <motion.div
-  //         initial={{ opacity: 0, y: 40 }}
-  //         whileInView={{ opacity: 1, y: 0 }}
-  //         viewport={{ once: true }}
-  //         transition={{ duration: 0.8 }}
-  //         className="relative overflow-hidden rounded-xl cursor-pointer group"
-  //         onClick={() => openLightbox(image)}
-  //       >
-  //         <img
-  //           src={image}
-  //           alt={title || ""}
-  //           className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
-  //         />
-  //         {/* طبقة تظليل تظهر عند مرور الماوس لمسة جمالية */}
-  //         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100" />
-  //       </motion.div>
-  //     );
-  //   }
-
-  //   // في حال لم تكن هناك صورة، لا تعرض شيئًا
-  //   return null;
-  // };
 
   return (
     <>
@@ -707,31 +396,7 @@ const CaseStudyDetailPage = () => {
                   index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
                 }`}
               >
-                {/* <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
-                  <div
-                    className="relative overflow-hidden rounded-xl cursor-pointer group"
-                    onClick={() => openLightbox(section.image)}
-                  >
-                    <img
-                      src={section.image}
-                      alt={section.title || ""}
-                      className="w-full h-80 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-black/50 backdrop-blur-sm rounded-full p-3">
-                        <ExternalLink className="h-6 w-6 text-white" />
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
                 <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
-                  {/* استخدم المكون الجديد هنا */}
-                  {/* <SectionImageDisplay
-                    image={section.image}
-                    title={section.title}
-                    openLightbox={openLightbox}
-                  /> */}
                   <SectionImageDisplay
                     section={section}
                     openLightbox={openLightbox}

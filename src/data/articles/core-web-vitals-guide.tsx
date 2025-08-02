@@ -1,17 +1,8 @@
 // src/data/articles/core-web-vitals-guide.tsx
 
-import React from "react";
-import { AlertTriangle } from "lucide-react";
 import TableOfContents from "../../components/TableOfContents";
 import CodeBlock from "../../components/CodeBlock";
-
-// مكون إضافي لعرض التحذيرات
-const WarningBox = ({ children }: { children: React.ReactNode }) => (
-  <div className="my-6 flex items-start gap-4 rounded-lg border border-yellow-500/30 bg-yellow-500/10 p-4">
-    <AlertTriangle className="h-5 w-5 flex-shrink-0 text-yellow-400 mt-1" />
-    <div className="text-sm text-yellow-200">{children}</div>
-  </div>
-);
+import { WarningBox } from "../../components/ArticleCallouts";
 
 const tocHeadings = [
   { id: "intro", title: "What Are Core Web Vitals?" },

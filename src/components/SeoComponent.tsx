@@ -32,13 +32,12 @@ interface SeoComponentProps {
     | "never";
 }
 
-// Wrapped in HelmetProvider for react-helmet-async compatibility
 const SeoComponent: React.FC<SeoComponentProps> = ({
   title,
   description,
-  keywords = "Digital Experience Architect, Web Development, UI/UX Design, React, Next.js, Performance Optimization",
+  keywords = "Rebhe Ibrahim, Digital Experience Architect, Web Development, React, Next.js, TypeScript, UI/UX Design, Performance Optimization, Full-Stack Developer",
   canonicalUrl,
-  ogImageUrl = "/images/og-default.jpg",
+  ogImageUrl = "/images/about/rebhe-ibrahim-web-developer.png",
   schemaType = "WebSite",
   publishedTime,
   modifiedTime,
@@ -46,13 +45,9 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
   articleSection,
   tags = [],
   noIndex = false,
-  // priority = 0.8,
-  // changeFreq = "weekly",
 }) => {
-  // const router = useRouter();
   const location = useLocation();
-  const baseUrl = "https://rebhe-ibrahim-portfolio.vercel.app/";
-  // const fullUrl = canonicalUrl || `${baseUrl}${router.asPath}`;
+  const baseUrl = "https://rebhe-ibrahim-portfolio.vercel.app";
   const fullUrl = canonicalUrl || `${baseUrl}${location.pathname}`;
   const fullTitle = title.includes("Rebhe Ibrahim")
     ? title
@@ -75,31 +70,28 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
           name: "Rebhe Ibrahim",
           jobTitle: "Digital Experience Architect",
           description:
-            "Expert in building high-performance web applications that scale, convert, and deliver exceptional user experiences.",
+            "Digital Experience Architect specializing in building high-performance web applications that scale, convert, and deliver exceptional user experiences for modern businesses.",
           url: baseUrl,
-          image: `${baseUrl}/images/rebhe-ibrahim.jpg`,
+          image: `${baseUrl}/images/about/rebhe-ibrahim-web-developer.png`,
           sameAs: [
             "https://linkedin.com/in/rebhe-ibrahim-451504244",
             "https://github.com/rebhi-2002",
-            "https://twitter.com/rebhe_1643",
+            "https://twitter.com/rebhe_1643"
           ],
           worksFor: {
             "@type": "Organization",
-            name: "Rebhe Ibrahim Consulting",
+            name: "Rebhe Ibrahim - Digital Experience Architect",
             url: baseUrl,
           },
           knowsAbout: [
             "Web Development",
             "React",
             "Next.js",
+            "TypeScript",
             "UI/UX Design",
             "Performance Optimization",
-            "Full-Stack Development",
+            "Full-Stack Development"
           ],
-          alumniOf: {
-            "@type": "EducationalOrganization",
-            name: "Computer Science",
-          },
         };
 
       case "WebSite":
@@ -116,11 +108,6 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
             "@type": "Person",
             name: "Rebhe Ibrahim",
           },
-          potentialAction: {
-            "@type": "SearchAction",
-            target: `${baseUrl}/search?q={search_term_string}`,
-            "query-input": "required name=search_term_string",
-          },
         };
 
       case "Article":
@@ -136,10 +123,6 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
           publisher: {
             "@type": "Person",
             name: "Rebhe Ibrahim",
-            logo: {
-              "@type": "ImageObject",
-              url: `${baseUrl}/images/logo.png`,
-            },
           },
           datePublished: publishedTime,
           dateModified: modifiedTime || publishedTime,
@@ -149,7 +132,6 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
           },
           articleSection,
           keywords: tags.join(", "),
-          wordCount: description.length,
         };
 
       case "Project":
@@ -177,9 +159,7 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
   };
 
   return (
-    // <HelmetProvider>
     <Helmet>
-      {/* // <Head> */}
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -236,16 +216,12 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
 
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@rebheibrahim" />
-      <meta name="twitter:creator" content="@rebheibrahim" />
+      <meta name="twitter:site" content="@rebhe_1643" />
+      <meta name="twitter:creator" content="@rebhe_1643" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullOgImageUrl} />
       <meta name="twitter:image:alt" content={title} />
-
-      {/* Additional Social Meta Tags */}
-      <meta property="fb:app_id" content="your-facebook-app-id" />
-      <meta name="linkedin:owner" content="rebheibrahim" />
 
       {/* Theme and Brand Colors */}
       <meta name="theme-color" content="#00A3FF" />
@@ -264,33 +240,10 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
         crossOrigin="anonymous"
       />
       <link rel="preconnect" href="https://images.pexels.com" />
-      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-
-      {/* Favicon and Icons */}
-      {/* <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon-16x16.png"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/apple-touch-icon.png"
-      /> */}
-      {/* <link rel="manifest" href="/site.webmanifest" /> */}
 
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      {/* <meta httpEquiv="X-Frame-Options" content="DENY" /> */}
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       <meta
         httpEquiv="Referrer-Policy"
@@ -306,7 +259,6 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
       />
 
       {/* Additional Schema for Breadcrumbs */}
-      {/* {router.asPath !== "/" && ( */}
       {location.pathname !== "/" && (
         <script
           type="application/ld+json"
@@ -332,9 +284,7 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
           }}
         />
       )}
-      {/* </Head> */}
     </Helmet>
-    // </HelmetProvider>
   );
 };
 

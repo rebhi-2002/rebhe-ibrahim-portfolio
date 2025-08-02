@@ -403,9 +403,9 @@ const ToolboxPage = () => {
       <SeoComponent
         title="My Digital Toolbox - Technologies & Tools"
         description="Explore the comprehensive collection of modern tools, technologies, and frameworks I use to create exceptional digital experiences."
-        keywords="Web Development Tools, React, Next.js, Node.js, TypeScript, Tailwind CSS, Development Stack"
+        keywords="Web Development Tools, React, Next.js, Node.js, TypeScript, Tailwind CSS, Development Stack, Rebhe Ibrahim Tools"
         schemaType="WebSite"
-        ogImageUrl="https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        ogImageUrl="/images/about/rebhe-ibrahim-web-developer.png"
       />
       <motion.div
         initial="initial"

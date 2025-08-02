@@ -1,30 +1,9 @@
 // src/data/articles/react-19-next-15-guide.tsx
 
-import React from "react";
 import TableOfContents from "../../components/TableOfContents";
 import CodeBlock from "../../components/CodeBlock";
-import {
-  Info,
-  AlertTriangle,
-  CheckCircle,
-  XCircle,
-  RefreshCw,
-} from "lucide-react";
-
-// Professional components for displaying notes and warnings
-const InfoBox = ({ children }: { children: React.ReactNode }) => (
-  <div className="my-6 flex items-start gap-4 rounded-lg border border-blue-500/30 bg-blue-500/10 p-4">
-    <Info className="h-5 w-5 flex-shrink-0 text-blue-400 mt-1" />
-    <div className="text-sm text-blue-200">{children}</div>
-  </div>
-);
-
-const WarningBox = ({ children }: { children: React.ReactNode }) => (
-  <div className="my-6 flex items-start gap-4 rounded-lg border border-yellow-500/30 bg-yellow-500/10 p-4">
-    <AlertTriangle className="h-5 w-5 flex-shrink-0 text-yellow-400 mt-1" />
-    <div className="text-sm text-yellow-200">{children}</div>
-  </div>
-);
+import { InfoBox, WarningBox } from "../../components/ArticleCallouts";
+import { CheckCircle, XCircle, RefreshCw } from "lucide-react";
 
 // Updated Table of Contents to reflect the new structure
 const tocHeadings = [

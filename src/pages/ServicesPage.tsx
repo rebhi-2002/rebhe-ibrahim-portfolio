@@ -164,9 +164,9 @@ const ServicesPage = () => {
       <SeoComponent
         title="Services - Digital Experience Architecture"
         description="Comprehensive web development services including full-stack development, UI/UX design, and performance optimization for modern businesses."
-        keywords="Web Development Services, Full-Stack Development, UI/UX Design, Performance Optimization, React Development"
+        keywords="Web Development Services, Full-Stack Development, UI/UX Design, Performance Optimization, React Development, Rebhe Ibrahim Services"
         schemaType="WebSite"
-        ogImageUrl="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        ogImageUrl="/images/about/rebhe-ibrahim-web-developer.png"
       />
       <motion.div
         initial="initial"
@@ -228,7 +228,14 @@ const ServicesPage = () => {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center transition-colors duration-200"
+                      onClick={() => {
+                        const serviceSlug = service.title
+                          .toLowerCase()
+                          .replace(/[^a-z0-9]+/g, '-')
+                          .replace(/(^-|-$)/g, '');
+                        window.location.href = `/services/${serviceSlug}`;
+                      }}
+                      className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center transition-colors duration-200 cursor-pointer"
                     >
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />

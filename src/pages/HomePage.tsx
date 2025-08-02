@@ -114,9 +114,9 @@ const HomePage = () => {
       <SeoComponent
         title="Rebhe Ibrahim - Digital Experience Architect"
         description="Building high-performance web applications that scale, convert, and deliver exceptional user experiences for modern businesses."
-        keywords="Digital Experience Architect, Web Development, React, Next.js, UI/UX Design, Performance Optimization, Full-Stack Developer"
+        keywords="Rebhe Ibrahim, Digital Experience Architect, Web Development, React, Next.js, TypeScript, UI/UX Design, Performance Optimization, Full-Stack Developer"
         schemaType="WebSite"
-        ogImageUrl="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        ogImageUrl="/images/about/rebhe-ibrahim-web-developer.png"
       />
       <motion.div
         initial="initial"

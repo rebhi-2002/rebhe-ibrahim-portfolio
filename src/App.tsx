@@ -12,6 +12,9 @@ import CaseStudyDetailPage from "./pages/CaseStudyDetailPage";
 import ToolboxPage from "./pages/ToolboxPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
+import FullStackDevelopmentPage from "./pages/services/FullStackDevelopmentPage";
+import UIDesignPage from "./pages/services/UIDesignPage";
+import PerformanceOptimizationPage from "./pages/services/PerformanceOptimizationPage";
 
 import ScrollToTop from "./components/ScrollToTop";
 import CalendlyScriptLoader from "./components/CalendlyScriptLoader";
@@ -31,6 +34,9 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/full-stack-development" element={<FullStackDevelopmentPage />} />
+            <Route path="/services/ui-ux-design-development" element={<UIDesignPage />} />
+            <Route path="/services/performance-optimization" element={<PerformanceOptimizationPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
             <Route path="/case-studies/:id" element={<CaseStudyDetailPage />} />
             <Route path="/toolbox" element={<ToolboxPage />} />
