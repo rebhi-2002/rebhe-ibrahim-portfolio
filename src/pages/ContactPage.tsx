@@ -1,4 +1,4 @@
-import  { useState, useEffect, ChangeEvent, FormEvent } from "react";
+import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
 import {
@@ -12,7 +12,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 
-import SeoComponent from "../components/SeoComponent";
+import SeoComponent from "../components/common/SeoComponent";
 import Toast from "../components/common/Toast";
 
 const ContactPage = () => {
@@ -165,7 +165,9 @@ const ContactPage = () => {
 
   return (
     <>
-      {toast && <Toast {...toast} onClose={() => setToast(null)} autoClose={true} />}
+      {toast && (
+        <Toast {...toast} onClose={() => setToast(null)} autoClose={true} />
+      )}
       <SeoComponent
         title="Contact - Let's Build Something Amazing Together"
         description="Ready to transform your digital presence? Get in touch to discuss your project and discover how we can bring your vision to life."

@@ -10,7 +10,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import SeoComponent from "../components/SeoComponent";
+import SeoComponent from "../components/common/SeoComponent";
 
 interface CaseStudySection {
   image: string;

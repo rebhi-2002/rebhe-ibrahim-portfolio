@@ -18,7 +18,7 @@ import "prismjs/themes/prism.css";
 import { AnimatePresence } from "framer-motion";
 import "prismjs/components/prism-jsx";
 
-import SeoComponent from "../components/SeoComponent";
+import SeoComponent from "../components/common/SeoComponent";
 import AuthorBio from "../components/blog/AuthorBio";
 
 import { articlesData } from "../data/blogData";

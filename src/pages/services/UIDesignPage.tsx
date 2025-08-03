@@ -1,47 +1,69 @@
 import { motion } from "framer-motion";
-import { 
-  ArrowLeft, 
-  Palette, 
-  Users, 
-  Eye, 
+import {
+  ArrowLeft,
+  Palette,
+  Users,
+  Eye,
   Smartphone,
   CheckCircle,
   Calendar,
-  ExternalLink
+  ExternalLink,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import SeoComponent from "../../components/SeoComponent";
+import SeoComponent from "../../components/common/SeoComponent";
 import { projects } from "../../data/projects";
 
 const UIDesignPage = () => {
   // Filter projects related to UI/UX design
-  const relatedProjects = projects.filter(project => 
-    project.description.toLowerCase().includes('ui') || 
-    project.description.toLowerCase().includes('design') ||
-    project.description.toLowerCase().includes('interface')
+  const relatedProjects = projects.filter(
+    (project) =>
+      project.description.toLowerCase().includes("ui") ||
+      project.description.toLowerCase().includes("design") ||
+      project.description.toLowerCase().includes("interface")
   );
 
   const designAreas = [
     {
       category: "User Research",
       icon: Users,
-      tools: ["User Interviews", "Persona Development", "Journey Mapping", "Competitive Analysis"]
+      tools: [
+        "User Interviews",
+        "Persona Development",
+        "Journey Mapping",
+        "Competitive Analysis",
+      ],
     },
     {
       category: "Visual Design",
       icon: Palette,
-      tools: ["Figma", "Adobe XD", "Color Theory", "Typography", "Brand Guidelines"]
+      tools: [
+        "Figma",
+        "Adobe XD",
+        "Color Theory",
+        "Typography",
+        "Brand Guidelines",
+      ],
     },
     {
       category: "Prototyping",
       icon: Eye,
-      tools: ["Interactive Prototypes", "Wireframing", "User Flow Design", "Usability Testing"]
+      tools: [
+        "Interactive Prototypes",
+        "Wireframing",
+        "User Flow Design",
+        "Usability Testing",
+      ],
     },
     {
       category: "Responsive Design",
       icon: Smartphone,
-      tools: ["Mobile-First Design", "Breakpoint Strategy", "Touch Interactions", "Progressive Enhancement"]
-    }
+      tools: [
+        "Mobile-First Design",
+        "Breakpoint Strategy",
+        "Touch Interactions",
+        "Progressive Enhancement",
+      ],
+    },
   ];
 
   const features = [
@@ -54,84 +76,126 @@ const UIDesignPage = () => {
     "Responsive design for all screen sizes",
     "Accessibility compliance (WCAG guidelines)",
     "Usability testing and iteration",
-    "Design handoff and developer collaboration"
+    "Design handoff and developer collaboration",
   ];
 
   const process = [
     {
       phase: "Research & Discovery",
       duration: "1 week",
-      description: "Understanding your users, business goals, and competitive landscape through research and stakeholder interviews.",
-      deliverables: ["User personas", "Competitive analysis", "Project requirements", "Design brief"]
+      description:
+        "Understanding your users, business goals, and competitive landscape through research and stakeholder interviews.",
+      deliverables: [
+        "User personas",
+        "Competitive analysis",
+        "Project requirements",
+        "Design brief",
+      ],
     },
     {
       phase: "Information Architecture",
       duration: "3-5 days",
-      description: "Organizing content and features into logical structures and creating user flow diagrams.",
-      deliverables: ["Site map", "User flow diagrams", "Content strategy", "Navigation structure"]
+      description:
+        "Organizing content and features into logical structures and creating user flow diagrams.",
+      deliverables: [
+        "Site map",
+        "User flow diagrams",
+        "Content strategy",
+        "Navigation structure",
+      ],
     },
     {
       phase: "Wireframing",
       duration: "1 week",
-      description: "Creating low-fidelity wireframes to establish layout, hierarchy, and functionality without visual distractions.",
-      deliverables: ["Low-fidelity wireframes", "Layout concepts", "Interaction patterns"]
+      description:
+        "Creating low-fidelity wireframes to establish layout, hierarchy, and functionality without visual distractions.",
+      deliverables: [
+        "Low-fidelity wireframes",
+        "Layout concepts",
+        "Interaction patterns",
+      ],
     },
     {
       phase: "Visual Design",
       duration: "2-3 weeks",
-      description: "Developing the visual identity, color schemes, typography, and high-fidelity designs that bring your brand to life.",
-      deliverables: ["High-fidelity designs", "Design system", "Style guide", "Asset library"]
+      description:
+        "Developing the visual identity, color schemes, typography, and high-fidelity designs that bring your brand to life.",
+      deliverables: [
+        "High-fidelity designs",
+        "Design system",
+        "Style guide",
+        "Asset library",
+      ],
     },
     {
       phase: "Prototyping",
       duration: "1 week",
-      description: "Creating interactive prototypes to demonstrate user interactions and validate design decisions.",
-      deliverables: ["Interactive prototypes", "Animation specifications", "Micro-interaction details"]
+      description:
+        "Creating interactive prototypes to demonstrate user interactions and validate design decisions.",
+      deliverables: [
+        "Interactive prototypes",
+        "Animation specifications",
+        "Micro-interaction details",
+      ],
     },
     {
       phase: "Testing & Iteration",
       duration: "1 week",
-      description: "Conducting usability tests, gathering feedback, and refining the design based on user insights.",
-      deliverables: ["Usability test results", "Design iterations", "Final design files", "Developer handoff"]
-    }
+      description:
+        "Conducting usability tests, gathering feedback, and refining the design based on user insights.",
+      deliverables: [
+        "Usability test results",
+        "Design iterations",
+        "Final design files",
+        "Developer handoff",
+      ],
+    },
   ];
 
   const designPrinciples = [
     {
       title: "User-Centered Design",
-      description: "Every design decision is made with the end user in mind, ensuring intuitive and delightful experiences."
+      description:
+        "Every design decision is made with the end user in mind, ensuring intuitive and delightful experiences.",
     },
     {
       title: "Accessibility First",
-      description: "Designing inclusive experiences that work for users of all abilities, following WCAG guidelines."
+      description:
+        "Designing inclusive experiences that work for users of all abilities, following WCAG guidelines.",
     },
     {
       title: "Performance Conscious",
-      description: "Balancing beautiful visuals with fast loading times and smooth interactions."
+      description:
+        "Balancing beautiful visuals with fast loading times and smooth interactions.",
     },
     {
       title: "Brand Consistency",
-      description: "Ensuring every element reflects your brand identity and maintains consistency across all touchpoints."
-    }
+      description:
+        "Ensuring every element reflects your brand identity and maintains consistency across all touchpoints.",
+    },
   ];
 
   const faqs = [
     {
       question: "Do you provide both UI and UX design services?",
-      answer: "Yes, I provide comprehensive UI/UX design services. This includes user research, information architecture, wireframing, visual design, prototyping, and usability testing to ensure both beautiful and functional designs."
+      answer:
+        "Yes, I provide comprehensive UI/UX design services. This includes user research, information architecture, wireframing, visual design, prototyping, and usability testing to ensure both beautiful and functional designs.",
     },
     {
       question: "What design tools do you use?",
-      answer: "I primarily use Figma for design and prototyping due to its collaborative features and powerful design systems. I also have experience with Adobe XD and can work with your preferred design tools."
+      answer:
+        "I primarily use Figma for design and prototyping due to its collaborative features and powerful design systems. I also have experience with Adobe XD and can work with your preferred design tools.",
     },
     {
       question: "How do you ensure the design works on all devices?",
-      answer: "I follow a mobile-first design approach, creating responsive designs that adapt seamlessly to different screen sizes. All designs are tested across various devices and browsers to ensure consistency."
+      answer:
+        "I follow a mobile-first design approach, creating responsive designs that adapt seamlessly to different screen sizes. All designs are tested across various devices and browsers to ensure consistency.",
     },
     {
       question: "Can you work with our existing brand guidelines?",
-      answer: "Absolutely! I can work within your existing brand guidelines and help extend them for digital applications. If you don't have brand guidelines, I can help create a cohesive design system."
-    }
+      answer:
+        "Absolutely! I can work within your existing brand guidelines and help extend them for digital applications. If you don't have brand guidelines, I can help create a cohesive design system.",
+    },
   ];
 
   return (
@@ -146,7 +210,8 @@ const UIDesignPage = () => {
 
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }} // animate={{ opacity: 1 }}
+        viewport={{ once: true }}
         className="pt-24 pb-20 overflow-x-hidden"
       >
         {/* Back Navigation */}
@@ -165,7 +230,8 @@ const UIDesignPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }} // animate={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -176,9 +242,10 @@ const UIDesignPage = () => {
                 UI/UX <span className="text-blue-500">Design</span>
               </h1>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-                Creating intuitive, accessible, and beautiful digital experiences that 
-                users love. From user research to high-fidelity prototypes, I design 
-                interfaces that drive engagement and conversions.
+                Creating intuitive, accessible, and beautiful digital
+                experiences that users love. From user research to high-fidelity
+                prototypes, I design interfaces that drive engagement and
+                conversions.
               </p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -211,7 +278,8 @@ const UIDesignPage = () => {
             >
               <h2 className="text-4xl font-bold mb-6">Design Expertise</h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Comprehensive design services covering every aspect of user experience
+                Comprehensive design services covering every aspect of user
+                experience
               </p>
             </motion.div>
 
@@ -252,22 +320,12 @@ const UIDesignPage = () => {
               >
                 <h2 className="text-4xl font-bold mb-6">What's Included</h2>
                 <p className="text-xl text-gray-400 mb-8">
-                  Comprehensive UI/UX design services that cover every aspect 
-                  of creating exceptional user experiences, from research to final implementation.
+                  Comprehensive UI/UX design services that cover every aspect of
+                  creating exceptional user experiences, from research to final
+                  implementation.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {[
-                    "User research and persona development",
-                    "Information architecture and user flow design",
-                    "Wireframing and low-fidelity prototypes",
-                    "High-fidelity visual designs",
-                    "Interactive prototypes and animations",
-                    "Design system creation and documentation",
-                    "Responsive design for all screen sizes",
-                    "Accessibility compliance (WCAG guidelines)",
-                    "Usability testing and iteration",
-                    "Design handoff and developer collaboration"
-                  ].map((feature, index) => (
+                  {features.map((feature, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
@@ -297,8 +355,9 @@ const UIDesignPage = () => {
                       User-Centered Approach
                     </h4>
                     <p className="text-gray-400">
-                      Every design decision starts with understanding your users' needs, 
-                      behaviors, and pain points to create truly intuitive experiences.
+                      Every design decision starts with understanding your
+                      users' needs, behaviors, and pain points to create truly
+                      intuitive experiences.
                     </p>
                   </div>
                   <div>
@@ -306,8 +365,8 @@ const UIDesignPage = () => {
                       Data-Driven Design
                     </h4>
                     <p className="text-gray-400">
-                      Using analytics, user feedback, and A/B testing to make informed 
-                      design decisions that improve conversion rates.
+                      Using analytics, user feedback, and A/B testing to make
+                      informed design decisions that improve conversion rates.
                     </p>
                   </div>
                   <div>
@@ -315,7 +374,7 @@ const UIDesignPage = () => {
                       Accessibility First
                     </h4>
                     <p className="text-gray-400">
-                      Designing inclusive experiences that work for all users, 
+                      Designing inclusive experiences that work for all users,
                       following WCAG guidelines and best practices.
                     </p>
                   </div>
@@ -375,8 +434,8 @@ const UIDesignPage = () => {
             >
               <h2 className="text-4xl font-bold mb-6">Design Process</h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                A user-centered design process that ensures your product meets both 
-                user needs and business objectives
+                A user-centered design process that ensures your product meets
+                both user needs and business objectives
               </p>
             </motion.div>
 
@@ -394,7 +453,7 @@ const UIDesignPage = () => {
                     <div>
                       <div className="flex items-center mb-4">
                         <span className="text-2xl font-bold text-blue-500 mr-4">
-                          {String(index + 1).padStart(2, '0')}
+                          {String(index + 1).padStart(2, "0")}
                         </span>
                         <h3 className="text-xl font-bold">{phase.phase}</h3>
                       </div>
@@ -405,14 +464,21 @@ const UIDesignPage = () => {
                     <div className="lg:col-span-2">
                       <p className="text-gray-400 mb-4">{phase.description}</p>
                       <div>
-                        <h4 className="font-semibold mb-2 text-blue-400">Deliverables:</h4>
+                        <h4 className="font-semibold mb-2 text-blue-400">
+                          Deliverables:
+                        </h4>
                         <ul className="space-y-1">
-                          {phase.deliverables.map((deliverable, deliverableIndex) => (
-                            <li key={deliverableIndex} className="flex items-center text-gray-300 text-sm">
-                              <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                              {deliverable}
-                            </li>
-                          ))}
+                          {phase.deliverables.map(
+                            (deliverable, deliverableIndex) => (
+                              <li
+                                key={deliverableIndex}
+                                className="flex items-center text-gray-300 text-sm"
+                              >
+                                <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                                {deliverable}
+                              </li>
+                            )
+                          )}
                         </ul>
                       </div>
                     </div>
@@ -436,7 +502,7 @@ const UIDesignPage = () => {
               >
                 <h2 className="text-4xl font-bold mb-6">Design Portfolio</h2>
                 <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                  Examples of how thoughtful design has improved user experience 
+                  Examples of how thoughtful design has improved user experience
                   and business outcomes
                 </p>
               </motion.div>
@@ -466,8 +532,12 @@ const UIDesignPage = () => {
                       </div>
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                      <p className="text-gray-400 mb-4 text-sm">{project.description}</p>
+                      <h3 className="text-xl font-bold mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-400 mb-4 text-sm">
+                        {project.description}
+                      </p>
                       <Link to={`/case-studies/${project.id}`}>
                         <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center justify-center">
                           <ExternalLink className="h-4 w-4 mr-1" />
@@ -492,7 +562,9 @@ const UIDesignPage = () => {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6">Frequently Asked Questions</h2>
+              <h2 className="text-4xl font-bold mb-6">
+                Frequently Asked Questions
+              </h2>
               <p className="text-xl text-gray-400">
                 Common questions about UI/UX design services
               </p>
@@ -532,7 +604,7 @@ const UIDesignPage = () => {
                 Ready to Improve Your User Experience?
               </h2>
               <p className="text-xl text-gray-400 mb-8">
-                Let's create a design that not only looks beautiful but also 
+                Let's create a design that not only looks beautiful but also
                 drives user engagement and business results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Code2, Users, Zap, Award, Coffee, BookOpen } from "lucide-react";
-import SeoComponent from "../components/SeoComponent";
+import SeoComponent from "../components/common/SeoComponent";
 
 const AboutPage = () => {
   const fadeInUp = {

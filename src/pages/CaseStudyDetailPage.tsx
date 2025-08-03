@@ -20,7 +20,7 @@ import {
   Quote,
 } from "lucide-react";
 
-import SeoComponent from "../components/SeoComponent";
+import SeoComponent from "../components/common/SeoComponent";
 import SectionImageDisplay from "../components/projects/SectionImageDisplay";
 import { projects } from "../data/projects";
 

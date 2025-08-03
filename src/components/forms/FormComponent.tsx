@@ -78,7 +78,9 @@ const CustomForm: React.FC<CustomFormProps> = ({
 
   return (
     <div className="relative">
-      {toast && <Toast {...toast} onClose={() => setToast(null)} autoClose={true} />}
+      {toast && (
+        <Toast {...toast} onClose={() => setToast(null)} autoClose={true} />
+      )}
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
@@ -165,7 +167,7 @@ const NewsletterForm = () => {
 
       <MailchimpSubscribe
         url={mailchimpUrl}
-        render={({ subscribe, status, message }: any) => (
+        render={({ subscribe, status, message }: MailchimpRenderProps) => (
           <CustomForm
             status={status}
             message={message}

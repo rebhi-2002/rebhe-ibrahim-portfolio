@@ -1,3 +1,10 @@
+// ⚠️ Problem explanation:
+// This code tries to import Next.js-specific modules (like next/head and next/router), which are not available in standard Vite/React projects.
+// The solution is provided below the original code using react-helmet-async and react-router-dom as Vite-compatible alternatives.
+
+// import Head from "next/head";
+// import { useRouter } from "next/router";
+
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
@@ -69,8 +76,7 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
           sameAs: [
             "https://linkedin.com/in/rebhe-ibrahim-451504244",
             "https://github.com/rebhi-2002",
-            "https://twitter.com/rebhe_1643",
-            "https://codepen.io/rebhe-2002"
+            "https://twitter.com/rebhe_1643"
           ],
           worksFor: {
             "@type": "Organization",
@@ -84,16 +90,8 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
             "TypeScript",
             "UI/UX Design",
             "Performance Optimization",
-            "Full-Stack Development",
-            "Digital Strategy"
+            "Full-Stack Development"
           ],
-          email: "rebheibrahim@gmail.com",
-          telephone: "+972597523575",
-          address: {
-            "@type": "PostalAddress",
-            addressCountry: "PS",
-            addressRegion: "Palestine"
-          }
         };
 
       case "WebSite":
@@ -110,12 +108,6 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
             "@type": "Person",
             name: "Rebhe Ibrahim",
           },
-          inLanguage: "en-US",
-          copyrightYear: new Date().getFullYear(),
-          copyrightHolder: {
-            "@type": "Person",
-            name: "Rebhe Ibrahim"
-          }
         };
 
       case "Article":
@@ -127,16 +119,10 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
           author: {
             "@type": "Person",
             name: author,
-            url: baseUrl,
-            sameAs: [
-              "https://linkedin.com/in/rebhe-ibrahim-451504244",
-              "https://github.com/rebhi-2002"
-            ]
           },
           publisher: {
             "@type": "Person",
             name: "Rebhe Ibrahim",
-            url: baseUrl
           },
           datePublished: publishedTime,
           dateModified: modifiedTime || publishedTime,
@@ -146,8 +132,6 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
           },
           articleSection,
           keywords: tags.join(", "),
-          inLanguage: "en-US",
-          isAccessibleForFree: true
         };
 
       case "Project":
@@ -160,7 +144,6 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
           creator: {
             "@type": "Person",
             name: "Rebhe Ibrahim",
-            url: baseUrl
           },
           dateCreated: publishedTime,
           dateModified: modifiedTime,
@@ -168,8 +151,6 @@ const SeoComponent: React.FC<SeoComponentProps> = ({
           keywords: tags.join(", "),
           genre: "Web Development",
           inLanguage: "en-US",
-          isAccessibleForFree: true,
-          license: "All rights reserved"
         };
 
       default:

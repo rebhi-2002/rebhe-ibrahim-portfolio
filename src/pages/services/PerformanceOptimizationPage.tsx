@@ -1,52 +1,74 @@
 import { motion } from "framer-motion";
-import { 
-  ArrowLeft, 
-  Zap, 
-  BarChart3, 
-  Target, 
+import {
+  ArrowLeft,
+  Zap,
+  BarChart3,
+  Target,
   TrendingUp,
   CheckCircle,
   Calendar,
-  ExternalLink
+  ExternalLink,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import SeoComponent from "../../components/SeoComponent";
+import SeoComponent from "../../components/common/SeoComponent";
 import { projects } from "../../data/projects";
 
 const PerformanceOptimizationPage = () => {
   // Filter projects related to performance optimization
-  const relatedProjects = projects.filter(project => 
-    project.description.toLowerCase().includes('performance') ||
-    project.description.toLowerCase().includes('optimization') ||
-    project.description.toLowerCase().includes('speed') ||
-    project.keyResults.some(result => 
-      result.metric.toLowerCase().includes('lcp') ||
-      result.metric.toLowerCase().includes('speed') ||
-      result.metric.toLowerCase().includes('performance')
-    )
+  const relatedProjects = projects.filter(
+    (project) =>
+      project.description.toLowerCase().includes("performance") ||
+      project.description.toLowerCase().includes("optimization") ||
+      project.description.toLowerCase().includes("speed") ||
+      project.keyResults.some(
+        (result) =>
+          result.metric.toLowerCase().includes("lcp") ||
+          result.metric.toLowerCase().includes("speed") ||
+          result.metric.toLowerCase().includes("performance")
+      )
   );
 
   const optimizationAreas = [
     {
       category: "Core Web Vitals",
       icon: Target,
-      metrics: ["Largest Contentful Paint (LCP)", "Interaction to Next Paint (INP)", "Cumulative Layout Shift (CLS)", "First Contentful Paint (FCP)"]
+      metrics: [
+        "Largest Contentful Paint (LCP)",
+        "Interaction to Next Paint (INP)",
+        "Cumulative Layout Shift (CLS)",
+        "First Contentful Paint (FCP)",
+      ],
     },
     {
       category: "Frontend Performance",
       icon: Zap,
-      metrics: ["Bundle Size Optimization", "Code Splitting", "Lazy Loading", "Image Optimization"]
+      metrics: [
+        "Bundle Size Optimization",
+        "Code Splitting",
+        "Lazy Loading",
+        "Image Optimization",
+      ],
     },
     {
       category: "Backend Performance",
       icon: BarChart3,
-      metrics: ["Database Query Optimization", "API Response Times", "Caching Strategies", "CDN Implementation"]
+      metrics: [
+        "Database Query Optimization",
+        "API Response Times",
+        "Caching Strategies",
+        "CDN Implementation",
+      ],
     },
     {
       category: "User Experience",
       icon: TrendingUp,
-      metrics: ["Page Load Speed", "Time to Interactive", "Bounce Rate Reduction", "Conversion Rate Improvement"]
-    }
+      metrics: [
+        "Page Load Speed",
+        "Time to Interactive",
+        "Bounce Rate Reduction",
+        "Conversion Rate Improvement",
+      ],
+    },
   ];
 
   const features = [
@@ -59,88 +81,129 @@ const PerformanceOptimizationPage = () => {
     "CDN setup and configuration",
     "Third-party script optimization",
     "Progressive loading and lazy loading",
-    "Performance monitoring and reporting"
+    "Performance monitoring and reporting",
   ];
 
   const process = [
     {
       phase: "Performance Audit",
       duration: "3-5 days",
-      description: "Comprehensive analysis of your current application using industry-standard tools to identify performance bottlenecks and opportunities.",
-      deliverables: ["Detailed performance report", "Lighthouse audit results", "Core Web Vitals analysis", "Optimization roadmap"]
+      description:
+        "Comprehensive analysis of your current application using industry-standard tools to identify performance bottlenecks and opportunities.",
+      deliverables: [
+        "Detailed performance report",
+        "Lighthouse audit results",
+        "Core Web Vitals analysis",
+        "Optimization roadmap",
+      ],
     },
     {
       phase: "Strategy Development",
       duration: "1 week",
-      description: "Creating a prioritized optimization strategy based on audit findings, focusing on high-impact improvements first.",
-      deliverables: ["Optimization strategy document", "Implementation timeline", "Expected performance gains", "Technical specifications"]
+      description:
+        "Creating a prioritized optimization strategy based on audit findings, focusing on high-impact improvements first.",
+      deliverables: [
+        "Optimization strategy document",
+        "Implementation timeline",
+        "Expected performance gains",
+        "Technical specifications",
+      ],
     },
     {
       phase: "Frontend Optimization",
       duration: "1-2 weeks",
-      description: "Implementing frontend optimizations including code splitting, image optimization, and reducing bundle sizes.",
-      deliverables: ["Optimized frontend code", "Reduced bundle sizes", "Improved loading strategies", "Enhanced user experience"]
+      description:
+        "Implementing frontend optimizations including code splitting, image optimization, and reducing bundle sizes.",
+      deliverables: [
+        "Optimized frontend code",
+        "Reduced bundle sizes",
+        "Improved loading strategies",
+        "Enhanced user experience",
+      ],
     },
     {
       phase: "Backend Optimization",
       duration: "1-2 weeks",
-      description: "Optimizing server-side performance through database tuning, caching implementation, and API improvements.",
-      deliverables: ["Database optimization", "Caching implementation", "API performance improvements", "Server configuration"]
+      description:
+        "Optimizing server-side performance through database tuning, caching implementation, and API improvements.",
+      deliverables: [
+        "Database optimization",
+        "Caching implementation",
+        "API performance improvements",
+        "Server configuration",
+      ],
     },
     {
       phase: "Testing & Validation",
       duration: "1 week",
-      description: "Thorough testing of all optimizations and validation of performance improvements using real-world metrics.",
-      deliverables: ["Performance test results", "Before/after comparisons", "Core Web Vitals improvements", "User experience validation"]
+      description:
+        "Thorough testing of all optimizations and validation of performance improvements using real-world metrics.",
+      deliverables: [
+        "Performance test results",
+        "Before/after comparisons",
+        "Core Web Vitals improvements",
+        "User experience validation",
+      ],
     },
     {
       phase: "Monitoring Setup",
       duration: "2-3 days",
-      description: "Setting up continuous performance monitoring to track improvements and catch any regressions early.",
-      deliverables: ["Performance monitoring dashboard", "Alert configurations", "Reporting setup", "Maintenance guidelines"]
-    }
+      description:
+        "Setting up continuous performance monitoring to track improvements and catch any regressions early.",
+      deliverables: [
+        "Performance monitoring dashboard",
+        "Alert configurations",
+        "Reporting setup",
+        "Maintenance guidelines",
+      ],
+    },
   ];
 
   const performanceMetrics = [
     {
       metric: "Page Load Speed",
       improvement: "Up to 70% faster",
-      description: "Significant reduction in initial page load times"
+      description: "Significant reduction in initial page load times",
     },
     {
       metric: "Bundle Size",
       improvement: "50-80% smaller",
-      description: "Optimized code and asset delivery"
+      description: "Optimized code and asset delivery",
     },
     {
       metric: "Core Web Vitals",
       improvement: "Green scores",
-      description: "Meeting Google's performance standards"
+      description: "Meeting Google's performance standards",
     },
     {
       metric: "User Engagement",
       improvement: "25-40% increase",
-      description: "Better performance leads to higher engagement"
-    }
+      description: "Better performance leads to higher engagement",
+    },
   ];
 
   const faqs = [
     {
       question: "How much can you improve my website's performance?",
-      answer: "Performance improvements vary based on the current state of your application. Typically, I achieve 50-70% improvements in load times, significant Core Web Vitals improvements, and 25-40% increases in user engagement. I provide detailed before/after metrics for all optimizations."
+      answer:
+        "Performance improvements vary based on the current state of your application. Typically, I achieve 50-70% improvements in load times, significant Core Web Vitals improvements, and 25-40% increases in user engagement. I provide detailed before/after metrics for all optimizations.",
     },
     {
-      question: "Will performance optimization affect my website's functionality?",
-      answer: "No, performance optimization enhances your website without compromising functionality. All optimizations are thoroughly tested to ensure your application works exactly as intended, just faster and more efficiently."
+      question:
+        "Will performance optimization affect my website's functionality?",
+      answer:
+        "No, performance optimization enhances your website without compromising functionality. All optimizations are thoroughly tested to ensure your application works exactly as intended, just faster and more efficiently.",
     },
     {
       question: "How long does performance optimization take?",
-      answer: "Most performance optimization projects take 2-4 weeks, depending on the complexity of your application and the extent of optimizations needed. I provide a detailed timeline after the initial audit."
+      answer:
+        "Most performance optimization projects take 2-4 weeks, depending on the complexity of your application and the extent of optimizations needed. I provide a detailed timeline after the initial audit.",
     },
     {
       question: "Do you provide ongoing performance monitoring?",
-      answer: "Yes, I set up comprehensive performance monitoring systems and can provide ongoing maintenance packages to ensure your application maintains optimal performance over time."
-    }
+      answer:
+        "Yes, I set up comprehensive performance monitoring systems and can provide ongoing maintenance packages to ensure your application maintains optimal performance over time.",
+    },
   ];
 
   return (
@@ -155,7 +218,8 @@ const PerformanceOptimizationPage = () => {
 
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }} // animate={{ opacity: 1 }}
+        viewport={{ once: true }}
         className="pt-24 pb-20 overflow-x-hidden"
       >
         {/* Back Navigation */}
@@ -174,7 +238,8 @@ const PerformanceOptimizationPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }} // animate={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -185,9 +250,10 @@ const PerformanceOptimizationPage = () => {
                 Performance <span className="text-blue-500">Optimization</span>
               </h1>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-                Transform your slow website into a lightning-fast digital experience. 
-                I optimize every aspect of your application to achieve superior performance, 
-                better SEO rankings, and increased user engagement.
+                Transform your slow website into a lightning-fast digital
+                experience. I optimize every aspect of your application to
+                achieve superior performance, better SEO rankings, and increased
+                user engagement.
               </p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -218,7 +284,9 @@ const PerformanceOptimizationPage = () => {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6">Typical Performance Improvements</h2>
+              <h2 className="text-4xl font-bold mb-6">
+                Typical Performance Improvements
+              </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
                 Real results from recent optimization projects
               </p>
@@ -257,7 +325,8 @@ const PerformanceOptimizationPage = () => {
             >
               <h2 className="text-4xl font-bold mb-6">Optimization Areas</h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Comprehensive performance optimization covering all aspects of your application
+                Comprehensive performance optimization covering all aspects of
+                your application
               </p>
             </motion.div>
 
@@ -298,22 +367,12 @@ const PerformanceOptimizationPage = () => {
               >
                 <h2 className="text-4xl font-bold mb-6">What's Included</h2>
                 <p className="text-xl text-gray-400 mb-8">
-                  Comprehensive performance optimization services that cover every aspect 
-                  of your application, from frontend to backend optimization.
+                  Comprehensive performance optimization services that cover
+                  every aspect of your application, from frontend to backend
+                  optimization.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {[
-                    "Comprehensive performance audit and analysis",
-                    "Core Web Vitals optimization (LCP, INP, CLS)",
-                    "Bundle size reduction and code splitting",
-                    "Image optimization and modern format implementation",
-                    "Database query optimization",
-                    "Caching strategy implementation",
-                    "CDN setup and configuration",
-                    "Third-party script optimization",
-                    "Progressive loading and lazy loading",
-                    "Performance monitoring and reporting"
-                  ].map((feature, index) => (
+                  {features.map((feature, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
@@ -336,15 +395,17 @@ const PerformanceOptimizationPage = () => {
                 transition={{ duration: 0.8 }}
                 className="bg-gray-800/50 p-8 rounded-xl border border-gray-700"
               >
-                <h3 className="text-2xl font-bold mb-6">Why Performance Matters?</h3>
+                <h3 className="text-2xl font-bold mb-6">
+                  Why Performance Matters?
+                </h3>
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-lg font-semibold mb-2 text-blue-400">
                       Better User Experience
                     </h4>
                     <p className="text-gray-400">
-                      Fast-loading websites provide better user experiences, leading to 
-                      higher engagement and lower bounce rates.
+                      Fast-loading websites provide better user experiences,
+                      leading to higher engagement and lower bounce rates.
                     </p>
                   </div>
                   <div>
@@ -352,8 +413,8 @@ const PerformanceOptimizationPage = () => {
                       Improved SEO Rankings
                     </h4>
                     <p className="text-gray-400">
-                      Google considers page speed as a ranking factor. Better Core Web 
-                      Vitals lead to improved search engine visibility.
+                      Google considers page speed as a ranking factor. Better
+                      Core Web Vitals lead to improved search engine visibility.
                     </p>
                   </div>
                   <div>
@@ -361,8 +422,8 @@ const PerformanceOptimizationPage = () => {
                       Higher Conversions
                     </h4>
                     <p className="text-gray-400">
-                      Studies show that even a 1-second delay in page load time can 
-                      result in a 7% reduction in conversions.
+                      Studies show that even a 1-second delay in page load time
+                      can result in a 7% reduction in conversions.
                     </p>
                   </div>
                 </div>
@@ -383,7 +444,8 @@ const PerformanceOptimizationPage = () => {
             >
               <h2 className="text-4xl font-bold mb-6">Optimization Process</h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                A systematic approach to identifying and implementing performance improvements
+                A systematic approach to identifying and implementing
+                performance improvements
               </p>
             </motion.div>
 
@@ -401,7 +463,7 @@ const PerformanceOptimizationPage = () => {
                     <div>
                       <div className="flex items-center mb-4">
                         <span className="text-2xl font-bold text-blue-500 mr-4">
-                          {String(index + 1).padStart(2, '0')}
+                          {String(index + 1).padStart(2, "0")}
                         </span>
                         <h3 className="text-xl font-bold">{phase.phase}</h3>
                       </div>
@@ -412,14 +474,21 @@ const PerformanceOptimizationPage = () => {
                     <div className="lg:col-span-2">
                       <p className="text-gray-400 mb-4">{phase.description}</p>
                       <div>
-                        <h4 className="font-semibold mb-2 text-blue-400">Deliverables:</h4>
+                        <h4 className="font-semibold mb-2 text-blue-400">
+                          Deliverables:
+                        </h4>
                         <ul className="space-y-1">
-                          {phase.deliverables.map((deliverable, deliverableIndex) => (
-                            <li key={deliverableIndex} className="flex items-center text-gray-300 text-sm">
-                              <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                              {deliverable}
-                            </li>
-                          ))}
+                          {phase.deliverables.map(
+                            (deliverable, deliverableIndex) => (
+                              <li
+                                key={deliverableIndex}
+                                className="flex items-center text-gray-300 text-sm"
+                              >
+                                <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                                {deliverable}
+                              </li>
+                            )
+                          )}
                         </ul>
                       </div>
                     </div>
@@ -441,9 +510,12 @@ const PerformanceOptimizationPage = () => {
                 transition={{ duration: 0.8 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-4xl font-bold mb-6">Performance Success Stories</h2>
+                <h2 className="text-4xl font-bold mb-6">
+                  Performance Success Stories
+                </h2>
                 <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                  See how performance optimization has transformed these applications
+                  See how performance optimization has transformed these
+                  applications
                 </p>
               </motion.div>
 
@@ -472,22 +544,31 @@ const PerformanceOptimizationPage = () => {
                       </div>
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                      <p className="text-gray-400 mb-4 text-sm">{project.description}</p>
+                      <h3 className="text-xl font-bold mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-400 mb-4 text-sm">
+                        {project.description}
+                      </p>
                       <div className="mb-4">
                         {project.keyResults
-                          .filter(result => 
-                            result.metric.toLowerCase().includes('lcp') ||
-                            result.metric.toLowerCase().includes('speed') ||
-                            result.metric.toLowerCase().includes('performance')
+                          .filter(
+                            (result) =>
+                              result.metric.toLowerCase().includes("lcp") ||
+                              result.metric.toLowerCase().includes("speed") ||
+                              result.metric
+                                .toLowerCase()
+                                .includes("performance")
                           )
                           .slice(0, 1)
                           .map((result, resultIndex) => (
-                            <div key={resultIndex} className="text-green-400 font-semibold text-sm">
+                            <div
+                              key={resultIndex}
+                              className="text-green-400 font-semibold text-sm"
+                            >
                               {result.metric}: {result.value}
                             </div>
-                          ))
-                        }
+                          ))}
                       </div>
                       <Link to={`/case-studies/${project.id}`}>
                         <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center justify-center">
@@ -513,7 +594,9 @@ const PerformanceOptimizationPage = () => {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold mb-6">Frequently Asked Questions</h2>
+              <h2 className="text-4xl font-bold mb-6">
+                Frequently Asked Questions
+              </h2>
               <p className="text-xl text-gray-400">
                 Common questions about performance optimization services
               </p>
@@ -553,8 +636,8 @@ const PerformanceOptimizationPage = () => {
                 Ready to Boost Your Performance?
               </h2>
               <p className="text-xl text-gray-400 mb-8">
-                Let's analyze your current performance and create a custom optimization 
-                strategy that delivers measurable improvements.
+                Let's analyze your current performance and create a custom
+                optimization strategy that delivers measurable improvements.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button

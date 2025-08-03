@@ -13,7 +13,7 @@ import {
   BookOpen,
   // TrendingUp,
 } from "lucide-react";
-import SeoComponent from "../components/SeoComponent";
+import SeoComponent from "../components/common/SeoComponent";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ImageWithSkeleton from "../components/blog/ImageWithSkeleton";
 
