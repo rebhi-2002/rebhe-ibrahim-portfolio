@@ -1,7 +1,7 @@
 // src/data/articles/frontend-tech-stack-2025.tsx
 
 import React from "react";
-import TableOfContents from "../../components/TableOfContents";
+import TableOfContents from "../../components/blog/TableOfContents";
 import {
   Box,
   Code,
@@ -13,7 +13,7 @@ import {
   PenTool,
   CheckSquare,
 } from "lucide-react";
-import TechCategoryCard from "../../components/TechCategoryCard";
+import TechCategoryCard from "../../components/services/TechCategoryCard";
 
 // ================================================================
 // مكون احترافي جديد ومميز لهذه المقالة

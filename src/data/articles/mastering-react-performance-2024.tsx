@@ -1,7 +1,7 @@
 // src/data/articles/mastering-react-performance-2024.tsx
 
-import TableOfContents from "../../components/TableOfContents";
-import CodeBlock from "../../components/CodeBlock";
+import TableOfContents from "../../components/blog/TableOfContents";
+import CodeBlock from "../../components/blog/CodeBlock";
 
 const tocHeadings = [
   { id: "step-1", title: "Step 1: Measure, Don't Guess" },

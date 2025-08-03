@@ -1,7 +1,7 @@
 // src/data/articles/building-accessible-web-applications.tsx
 
-import TableOfContents from "../../components/TableOfContents";
-import CodeBlock from "../../components/CodeBlock";
+import TableOfContents from "../../components/blog/TableOfContents";
+import CodeBlock from "../../components/blog/CodeBlock";
 
 const tocHeadings = [
   { id: "why-it-matters", title: "Why Accessibility Matters" },

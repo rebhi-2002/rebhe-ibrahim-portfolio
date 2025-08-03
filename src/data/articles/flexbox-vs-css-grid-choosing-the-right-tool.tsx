@@ -1,10 +1,10 @@
 // src/data/articles/flexbox-vs-css-grid.tsx
 
 import { Rows, Columns, Box, Package } from "lucide-react";
-import TableOfContents from "../../components/TableOfContents";
-import CodeBlock from "../../components/CodeBlock";
-import FeatureCard from "../../components/FeatureCard";
-import ComparisonTable from "../../components/ComparisonTable";
+import TableOfContents from "../../components/blog/TableOfContents";
+import CodeBlock from "../../components/blog/CodeBlock";
+import FeatureCard from "../../components/services/FeatureCard";
+import ComparisonTable from "../../components/projects/ComparisonTable";
 
 const tocHeadings = [
   { id: "intro", title: "Introduction: Two Tools, One Goal" },

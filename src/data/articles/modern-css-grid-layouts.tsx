@@ -1,7 +1,7 @@
 // src/data/articles/modern-css-grid-layouts.tsx
 
-import TableOfContents from "../../components/TableOfContents";
-import CodeBlock from "../../components/CodeBlock";
+import TableOfContents from "../../components/blog/TableOfContents";
+import CodeBlock from "../../components/blog/CodeBlock";
 
 const tocHeadings = [
   { id: "intro", title: "Introduction to Modern Grid" },

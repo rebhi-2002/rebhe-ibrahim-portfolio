@@ -225,21 +225,21 @@ const ServicesPage = () => {
                       ))}
                     </div>
 
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={() => {
-                        const serviceSlug = service.title
-                          .toLowerCase()
-                          .replace(/[^a-z0-9]+/g, '-')
-                          .replace(/(^-|-$)/g, '');
-                        window.location.href = `/services/${serviceSlug}`;
-                      }}
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center transition-colors duration-200 cursor-pointer"
+                    <Link
+                      to={`/services/${service.title
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]+/g, '-')
+                        .replace(/(^-|-$)/g, '')}`}
                     >
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </motion.button>
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center transition-colors duration-200"
+                      >
+                        Learn More
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </motion.button>
+                    </Link>
                   </div>
 
                   <div
@@ -372,19 +372,7 @@ const ServicesPage = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center transition-colors duration-200"
-                  >
-                    <Link
-                      to={`/services/${service.title
-                        .toLowerCase()
-                        .replace(/[^a-z0-9]+/g, '-')
-                        .replace(/(^-|-$)/g, '')}`}
-                      className="flex items-center"
-                    >
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </motion.button>
+                    className="bg-transparent border border-blue-600 hover:bg-blue-600 text-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
                   >
                     View My Work
                   </motion.button>

@@ -1,8 +1,8 @@
 // src/data/articles/react-state-management-redux-vs-zustand.tsx
 
-import TableOfContents from "../../components/TableOfContents";
-import CodeBlock from "../../components/CodeBlock";
-import { ProsCard, ConsCard } from "../../components/ArticleCallouts";
+import TableOfContents from "../../components/blog/TableOfContents";
+import CodeBlock from "../../components/blog/CodeBlock";
+import { ProsCard, ConsCard } from "../../components/blog/ArticleCallouts";
 
 const tocHeadings = [
   { id: "intro", title: "The State of State Management" },

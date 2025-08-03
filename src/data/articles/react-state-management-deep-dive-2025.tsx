@@ -1,8 +1,8 @@
 // src/data/articles/react-state-management-deep-dive-2025.tsx
 
-import TableOfContents from "../../components/TableOfContents";
-import CodeBlock from "../../components/CodeBlock";
-import { ProsCard } from "../../components/ArticleCallouts";
+import TableOfContents from "../../components/blog/TableOfContents";
+import CodeBlock from "../../components/blog/CodeBlock";
+import { ProsCard } from "../../components/blog/ArticleCallouts";
 
 const tocHeadings = [
   { id: "intro", title: "Introduction: The Challenge of State" },

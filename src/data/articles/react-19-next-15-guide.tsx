@@ -1,8 +1,8 @@
 // src/data/articles/react-19-next-15-guide.tsx
 
-import TableOfContents from "../../components/TableOfContents";
-import CodeBlock from "../../components/CodeBlock";
-import { InfoBox, WarningBox } from "../../components/ArticleCallouts";
+import TableOfContents from "../../components/blog/TableOfContents";
+import CodeBlock from "../../components/blog/CodeBlock";
+import { InfoBox, WarningBox } from "../../components/blog/ArticleCallouts";
 import { CheckCircle, XCircle, RefreshCw } from "lucide-react";
 
 // Updated Table of Contents to reflect the new structure
