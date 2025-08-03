@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/common/Navbar";
+import Footer from "./components/common/Footer";
 
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -16,8 +16,8 @@ import FullStackDevelopmentPage from "./pages/services/FullStackDevelopmentPage"
 import UIDesignPage from "./pages/services/UIDesignPage";
 import PerformanceOptimizationPage from "./pages/services/PerformanceOptimizationPage";
 
-import ScrollToTop from "./components/ScrollToTop";
-import CalendlyScriptLoader from "./components/CalendlyScriptLoader";
+import ScrollToTop from "./components/common/ScrollToTop";
+import CalendlyScriptLoader from "./components/utilities/CalendlyScriptLoader";
 
 import NotFoundPage from "./pages/NotFoundPage";
 import ArticleDetailPage from "./pages/ArticleDetailPage";

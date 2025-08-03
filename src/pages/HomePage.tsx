@@ -11,8 +11,8 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import SeoComponent from "../components/SeoComponent";
-import FormComponent from "../components/FormComponent";
-import LatestPost from "./LatestPost";
+import FormComponent from "../components/forms/FormComponent";
+import LatestPost from "../components/blog/LatestPost";
 
 const HomePage = () => {
   const fadeInUp = {

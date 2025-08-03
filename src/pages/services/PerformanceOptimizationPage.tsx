@@ -286,6 +286,91 @@ const PerformanceOptimizationPage = () => {
           </div>
         </section>
 
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <h2 className="text-4xl font-bold mb-6">What's Included</h2>
+                <p className="text-xl text-gray-400 mb-8">
+                  Comprehensive performance optimization services that cover every aspect 
+                  of your application, from frontend to backend optimization.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    "Comprehensive performance audit and analysis",
+                    "Core Web Vitals optimization (LCP, INP, CLS)",
+                    "Bundle size reduction and code splitting",
+                    "Image optimization and modern format implementation",
+                    "Database query optimization",
+                    "Caching strategy implementation",
+                    "CDN setup and configuration",
+                    "Third-party script optimization",
+                    "Progressive loading and lazy loading",
+                    "Performance monitoring and reporting"
+                  ].map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="flex items-start"
+                    >
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-300 text-sm">{feature}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="bg-gray-800/50 p-8 rounded-xl border border-gray-700"
+              >
+                <h3 className="text-2xl font-bold mb-6">Why Performance Matters?</h3>
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2 text-blue-400">
+                      Better User Experience
+                    </h4>
+                    <p className="text-gray-400">
+                      Fast-loading websites provide better user experiences, leading to 
+                      higher engagement and lower bounce rates.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2 text-blue-400">
+                      Improved SEO Rankings
+                    </h4>
+                    <p className="text-gray-400">
+                      Google considers page speed as a ranking factor. Better Core Web 
+                      Vitals lead to improved search engine visibility.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2 text-blue-400">
+                      Higher Conversions
+                    </h4>
+                    <p className="text-gray-400">
+                      Studies show that even a 1-second delay in page load time can 
+                      result in a 7% reduction in conversions.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Process Section */}
         <section className="py-20 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

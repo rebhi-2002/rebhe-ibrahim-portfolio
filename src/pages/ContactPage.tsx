@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 import SeoComponent from "../components/SeoComponent";
-import Toast from "../components/Toast";
+import Toast from "../components/common/Toast";
 
 const ContactPage = () => {
   // استخراج دالة إعادة التعيين من useForm

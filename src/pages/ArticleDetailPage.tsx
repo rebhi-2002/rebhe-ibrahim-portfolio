@@ -19,12 +19,12 @@ import { AnimatePresence } from "framer-motion";
 import "prismjs/components/prism-jsx";
 
 import SeoComponent from "../components/SeoComponent";
-import AuthorBio from "../components/AuthorBio";
+import AuthorBio from "../components/blog/AuthorBio";
 
 import { articlesData } from "../data/blogData";
-import ArticleSkeleton from "../components/ArticleSkeleton";
+import ArticleSkeleton from "../components/blog/ArticleSkeleton";
 
-import ErrorPage from "../components/ErrorPage";
+import ErrorPage from "./ErrorPage";
 
 // Load article content as TSX component dynamically
 const ArticleDetailPage = () => {

@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 import SeoComponent from "../components/SeoComponent";
-import SectionImageDisplay from "../components/SectionImageDisplay";
+import SectionImageDisplay from "../components/projects/SectionImageDisplay";
 import { projects } from "../data/projects";
 
 import {

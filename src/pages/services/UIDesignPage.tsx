@@ -240,6 +240,91 @@ const UIDesignPage = () => {
           </div>
         </section>
 
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <h2 className="text-4xl font-bold mb-6">What's Included</h2>
+                <p className="text-xl text-gray-400 mb-8">
+                  Comprehensive UI/UX design services that cover every aspect 
+                  of creating exceptional user experiences, from research to final implementation.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    "User research and persona development",
+                    "Information architecture and user flow design",
+                    "Wireframing and low-fidelity prototypes",
+                    "High-fidelity visual designs",
+                    "Interactive prototypes and animations",
+                    "Design system creation and documentation",
+                    "Responsive design for all screen sizes",
+                    "Accessibility compliance (WCAG guidelines)",
+                    "Usability testing and iteration",
+                    "Design handoff and developer collaboration"
+                  ].map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="flex items-start"
+                    >
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-300 text-sm">{feature}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="bg-gray-800/50 p-8 rounded-xl border border-gray-700"
+              >
+                <h3 className="text-2xl font-bold mb-6">Design Philosophy</h3>
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2 text-blue-400">
+                      User-Centered Approach
+                    </h4>
+                    <p className="text-gray-400">
+                      Every design decision starts with understanding your users' needs, 
+                      behaviors, and pain points to create truly intuitive experiences.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2 text-blue-400">
+                      Data-Driven Design
+                    </h4>
+                    <p className="text-gray-400">
+                      Using analytics, user feedback, and A/B testing to make informed 
+                      design decisions that improve conversion rates.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2 text-blue-400">
+                      Accessibility First
+                    </h4>
+                    <p className="text-gray-400">
+                      Designing inclusive experiences that work for all users, 
+                      following WCAG guidelines and best practices.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Design Principles */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

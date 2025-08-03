@@ -15,16 +15,16 @@ import {
 } from "lucide-react";
 import SeoComponent from "../components/SeoComponent";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import ImageWithSkeleton from "../components/ImageWithSkeleton";
+import ImageWithSkeleton from "../components/blog/ImageWithSkeleton";
 
 import {
   articlesData as articles,
   recommendedReadsData as recommendedReads,
 } from "../data/blogData";
 
-import Pagination from "../components/Pagination";
+import Pagination from "../components/blog/Pagination";
 
-import NewsletterSection from "../components/NewsletterSection";
+import NewsletterSection from "../components/forms/NewsletterSection";
 
 const BlogPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");

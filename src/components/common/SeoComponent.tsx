@@ -1,0 +1,310 @@
+import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
+
+interface SeoComponentProps {
+  title: string;
+  description: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogImageUrl?: string;
+  schemaType?: "Person" | "WebSite" | "Article" | "Project" | "Organization";
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  articleSection?: string;
+  tags?: string[];
+  noIndex?: boolean;
+  priority?: number;
+  changeFreq?:
+    | "always"
+    | "hourly"
+    | "daily"
+    | "weekly"
+    | "monthly"
+    | "yearly"
+    | "never";
+}
+
+const SeoComponent: React.FC<SeoComponentProps> = ({
+  title,
+  description,
+  keywords = "Rebhe Ibrahim, Digital Experience Architect, Web Development, React, Next.js, TypeScript, UI/UX Design, Performance Optimization, Full-Stack Developer",
+  canonicalUrl,
+  ogImageUrl = "/images/about/rebhe-ibrahim-web-developer.png",
+  schemaType = "WebSite",
+  publishedTime,
+  modifiedTime,
+  author = "Rebhe Ibrahim",
+  articleSection,
+  tags = [],
+  noIndex = false,
+}) => {
+  const location = useLocation();
+  const baseUrl = "https://rebhe-ibrahim-portfolio.vercel.app";
+  const fullUrl = canonicalUrl || `${baseUrl}${location.pathname}`;
+  const fullTitle = title.includes("Rebhe Ibrahim")
+    ? title
+    : `${title} | Rebhe Ibrahim - Digital Experience Architect`;
+  const fullOgImageUrl = ogImageUrl.startsWith("http")
+    ? ogImageUrl
+    : `${baseUrl}${ogImageUrl}`;
+
+  // Generate structured data based on schema type
+  const generateStructuredData = () => {
+    const baseSchema = {
+      "@context": "https://schema.org",
+      "@type": schemaType,
+    };
+
+    switch (schemaType) {
+      case "Person":
+        return {
+          ...baseSchema,
+          name: "Rebhe Ibrahim",
+          jobTitle: "Digital Experience Architect",
+          description:
+            "Digital Experience Architect specializing in building high-performance web applications that scale, convert, and deliver exceptional user experiences for modern businesses.",
+          url: baseUrl,
+          image: `${baseUrl}/images/about/rebhe-ibrahim-web-developer.png`,
+          sameAs: [
+            "https://linkedin.com/in/rebhe-ibrahim-451504244",
+            "https://github.com/rebhi-2002",
+            "https://twitter.com/rebhe_1643",
+            "https://codepen.io/rebhe-2002"
+          ],
+          worksFor: {
+            "@type": "Organization",
+            name: "Rebhe Ibrahim - Digital Experience Architect",
+            url: baseUrl,
+          },
+          knowsAbout: [
+            "Web Development",
+            "React",
+            "Next.js",
+            "TypeScript",
+            "UI/UX Design",
+            "Performance Optimization",
+            "Full-Stack Development",
+            "Digital Strategy"
+          ],
+          email: "rebheibrahim@gmail.com",
+          telephone: "+972597523575",
+          address: {
+            "@type": "PostalAddress",
+            addressCountry: "PS",
+            addressRegion: "Palestine"
+          }
+        };
+
+      case "WebSite":
+        return {
+          ...baseSchema,
+          name: "Rebhe Ibrahim - Digital Experience Architect",
+          description,
+          url: baseUrl,
+          author: {
+            "@type": "Person",
+            name: "Rebhe Ibrahim",
+          },
+          publisher: {
+            "@type": "Person",
+            name: "Rebhe Ibrahim",
+          },
+          inLanguage: "en-US",
+          copyrightYear: new Date().getFullYear(),
+          copyrightHolder: {
+            "@type": "Person",
+            name: "Rebhe Ibrahim"
+          }
+        };
+
+      case "Article":
+        return {
+          ...baseSchema,
+          headline: title,
+          description,
+          image: fullOgImageUrl,
+          author: {
+            "@type": "Person",
+            name: author,
+            url: baseUrl,
+            sameAs: [
+              "https://linkedin.com/in/rebhe-ibrahim-451504244",
+              "https://github.com/rebhi-2002"
+            ]
+          },
+          publisher: {
+            "@type": "Person",
+            name: "Rebhe Ibrahim",
+            url: baseUrl
+          },
+          datePublished: publishedTime,
+          dateModified: modifiedTime || publishedTime,
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": fullUrl,
+          },
+          articleSection,
+          keywords: tags.join(", "),
+          inLanguage: "en-US",
+          isAccessibleForFree: true
+        };
+
+      case "Project":
+        return {
+          ...baseSchema,
+          "@type": "CreativeWork",
+          name: title,
+          description,
+          image: fullOgImageUrl,
+          creator: {
+            "@type": "Person",
+            name: "Rebhe Ibrahim",
+            url: baseUrl
+          },
+          dateCreated: publishedTime,
+          dateModified: modifiedTime,
+          url: fullUrl,
+          keywords: tags.join(", "),
+          genre: "Web Development",
+          inLanguage: "en-US",
+          isAccessibleForFree: true,
+          license: "All rights reserved"
+        };
+
+      default:
+        return baseSchema;
+    }
+  };
+
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content={author} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+        name="robots"
+        content={noIndex ? "noindex, nofollow" : "index, follow"}
+      />
+
+      {/* Canonical URL */}
+      <link rel="canonical" href={fullUrl} />
+
+      {/* Language and Locale */}
+      <meta httpEquiv="content-language" content="en-US" />
+      <meta name="language" content="English" />
+
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta
+        property="og:type"
+        content={schemaType === "Article" ? "article" : "website"}
+      />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:image" content={fullOgImageUrl} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={title} />
+      <meta
+        property="og:site_name"
+        content="Rebhe Ibrahim | Digital Experience Architect"
+      />
+      <meta property="og:locale" content="en_US" />
+
+      {/* Article-specific Open Graph */}
+      {schemaType === "Article" && publishedTime && (
+        <>
+          <meta property="article:published_time" content={publishedTime} />
+          <meta
+            property="article:modified_time"
+            content={modifiedTime || publishedTime}
+          />
+          <meta property="article:author" content={author} />
+          {articleSection && (
+            <meta property="article:section" content={articleSection} />
+          )}
+          {tags.map((tag, index) => (
+            <meta key={index} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
+
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@rebhe_1643" />
+      <meta name="twitter:creator" content="@rebhe_1643" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={fullOgImageUrl} />
+      <meta name="twitter:image:alt" content={title} />
+
+      {/* Theme and Brand Colors */}
+      <meta name="theme-color" content="#00A3FF" />
+      <meta name="msapplication-TileColor" content="#00A3FF" />
+      <meta name="msapplication-navbutton-color" content="#00A3FF" />
+      <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"
+      />
+
+      {/* Performance and Resource Hints */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="anonymous"
+      />
+      <link rel="preconnect" href="https://images.pexels.com" />
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+      {/* Security Headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta
+        httpEquiv="Referrer-Policy"
+        content="strict-origin-when-cross-origin"
+      />
+
+      {/* Structured Data (JSON-LD) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateStructuredData()),
+        }}
+      />
+
+      {/* Additional Schema for Breadcrumbs */}
+      {location.pathname !== "/" && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: baseUrl,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: title,
+                  item: fullUrl,
+                },
+              ],
+            }),
+          }}
+        />
+      )}
+    </Helmet>
+  );
+};
+
+export default SeoComponent;
