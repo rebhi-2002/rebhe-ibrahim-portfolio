@@ -193,7 +193,7 @@ const FrontendTechStackGuide = () => {
           </li>
           <li>
             <strong>For Intermediate Developers:</strong> Explore the categories
-            you're less familiar with. If you're strong in React, dive deep into
+            you're less familiar with. If you\'re strong in React, dive deep into
             Data Fetching with React Query or advanced styling with Tailwind.
           </li>
           <li>
