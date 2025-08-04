@@ -211,10 +211,15 @@ const BlogPage = () => {
 
     // Filter by search term
     if (searchTerm) {
+      const searchLower = searchTerm.toLowerCase();
       tempArticles = tempArticles.filter(
         (article) =>
-          article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          article.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
+          article.title.toLowerCase().includes(searchLower) ||
+          article.excerpt.toLowerCase().includes(searchLower) ||
+          (article.content &&
+            article.content.toLowerCase().includes(searchLower)) ||
+          article.category.toLowerCase().includes(searchLower) ||
+          article.tags.some((tag) => tag.toLowerCase().includes(searchLower))
       );
     }
 
@@ -431,7 +436,7 @@ const BlogPage = () => {
 
         {/* Categories Filter */}
         <section ref={articlesGridRef} className="py-10">
-          <div className="mb-12 max-w-lg mx-auto">
+          {/* <div className="mb-12 max-w-lg mx-auto">
             <input
               type="text"
               placeholder="Search articles..."
@@ -439,6 +444,32 @@ const BlogPage = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
             />
+          </div> */}
+          <div className="mb-12 max-w-2xl mx-auto">
+            <div className="relative group">
+              <input
+                type="text"
+                placeholder="Search articles..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-6 py-4 bg-gray-800/50 backdrop-blur-sm border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 text-lg"
+              />
+              <div className="absolute inset-y-0 right-0 flex items-center pr-6 pointer-events-none">
+                <svg
+                  className="h-5 w-5 text-gray-400 group-hover:text-blue-500 transition-colors duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
