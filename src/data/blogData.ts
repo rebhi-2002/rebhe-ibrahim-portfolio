@@ -1,17 +1,17 @@
 // src/data/blogData.ts
 
-import React from "react";
+// import React from "react";
 
-import MasteringReactPerformance2024 from "./articles/mastering-react-performance-2024";
-import BuildingAccessibleWebApps from "./articles/building-accessible-web-applications";
-import ModernCssGridLayouts from "./articles/modern-css-grid-layouts";
-import JavaScriptES2025 from "./articles/javascript-es2025-whats-new";
-import CoreWebVitalsGuide from "./articles/core-web-vitals-guide";
-import ReduxVsZustand from "./articles/react-state-management-redux-toolkit-vs-zustand";
-import FlexboxVsCssGrid from "./articles/flexbox-vs-css-grid-choosing-the-right-tool";
-import FrontendTechStackGuide from "./articles/frontend-tech-stack-2025-the-complete-guide";
-import StateManagementDeepDive from "./articles/react-state-management-deep-dive-2025";
-import React19Next15Guide from "./articles/react-19-next-15-guide";
+// import MasteringReactPerformance2024 from "./articles/mastering-react-performance-2024";
+// import BuildingAccessibleWebApps from "./articles/building-accessible-web-applications";
+// import ModernCssGridLayouts from "./articles/modern-css-grid-layouts";
+// import JavaScriptES2025 from "./articles/javascript-es2025-whats-new";
+// import CoreWebVitalsGuide from "./articles/core-web-vitals-guide";
+// import ReduxVsZustand from "./articles/react-state-management-redux-toolkit-vs-zustand";
+// import FlexboxVsCssGrid from "./articles/flexbox-vs-css-grid-choosing-the-right-tool";
+// import FrontendTechStackGuide from "./articles/frontend-tech-stack-2025-the-complete-guide";
+// import StateManagementDeepDive from "./articles/react-state-management-deep-dive-2025";
+// import React19Next15Guide from "./articles/react-19-next-15-guide";
 
 export interface Author {
   name: string;
@@ -46,7 +46,7 @@ export interface Article {
   featured: boolean;
   tags: string[];
   author: Author;
-  contentComponent: React.ComponentType;
+  // contentComponent: React.ComponentType;
 }
 
 const defaultAuthor: Author = {
@@ -75,7 +75,7 @@ export const articlesData: Article[] = [
     featured: false,
     tags: ["React", "Performance", "Optimization"],
     author: defaultAuthor,
-    contentComponent: MasteringReactPerformance2024,
+    // contentComponent: MasteringReactPerformance2024,
   },
   {
     id: 2,
@@ -90,7 +90,7 @@ export const articlesData: Article[] = [
     featured: false,
     tags: ["Accessibility", "UX", "Web Standards"],
     author: defaultAuthor,
-    contentComponent: BuildingAccessibleWebApps,
+    // contentComponent: BuildingAccessibleWebApps,
   },
   {
     id: 3,
@@ -105,7 +105,7 @@ export const articlesData: Article[] = [
     featured: false,
     tags: ["CSS", "Grid", "Responsive Design"],
     author: defaultAuthor,
-    contentComponent: ModernCssGridLayouts,
+    // contentComponent: ModernCssGridLayouts,
   },
   {
     id: 4,
@@ -120,7 +120,7 @@ export const articlesData: Article[] = [
     featured: false,
     tags: ["JavaScript", "ES2025", "ECMAScript", "Pipe Operator"],
     author: defaultAuthor,
-    contentComponent: JavaScriptES2025,
+    // contentComponent: JavaScriptES2025,
   },
   {
     id: 5,
@@ -135,7 +135,7 @@ export const articlesData: Article[] = [
     featured: false,
     tags: ["Performance", "SEO", "Web Vitals", "LCP", "INP", "CLS", "UX"],
     author: defaultAuthor,
-    contentComponent: CoreWebVitalsGuide,
+    // contentComponent: CoreWebVitalsGuide,
   },
   {
     id: 6,
@@ -158,7 +158,7 @@ export const articlesData: Article[] = [
       "Flux",
     ],
     author: defaultAuthor,
-    contentComponent: ReduxVsZustand,
+    // contentComponent: ReduxVsZustand,
   },
   {
     id: 7,
@@ -173,7 +173,7 @@ export const articlesData: Article[] = [
     featured: false,
     tags: ["CSS", "Flexbox", "Grid", "Layout", "Responsive Design"],
     author: defaultAuthor,
-    contentComponent: FlexboxVsCssGrid,
+    // contentComponent: FlexboxVsCssGrid,
   },
   {
     id: 8,
@@ -188,7 +188,7 @@ export const articlesData: Article[] = [
     featured: false,
     tags: ["Frontend", "Tech Stack", "React", "Vite", "JavaScript", "CSS"],
     author: defaultAuthor,
-    contentComponent: FrontendTechStackGuide,
+    // contentComponent: FrontendTechStackGuide,
   },
   {
     id: 9,
@@ -210,7 +210,7 @@ export const articlesData: Article[] = [
       "MobX",
     ],
     author: defaultAuthor,
-    contentComponent: StateManagementDeepDive,
+    // contentComponent: StateManagementDeepDive,
     readTime: "14 min",
   },
   {
@@ -225,7 +225,7 @@ export const articlesData: Article[] = [
     featured: false,
     tags: ["React 19", "Next.js 15", "React Compiler", "Server Actions", "PPR"],
     author: defaultAuthor,
-    contentComponent: React19Next15Guide,
+    // contentComponent: React19Next15Guide,
     readTime: "14 min",
   },
 ];
