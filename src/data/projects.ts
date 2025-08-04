@@ -72,7 +72,8 @@ export const projects = [
       content:
         "StyleMart is a testament to building a complete, production-ready e-commerce platform. It showcases a deep understanding of both frontend user experience and backend system architecture.",
       author: "Rebhe Ibrahim",
-      role: "CEO, StyleMart",
+      // role: "CEO, StyleMart",
+      role: "Project Lead & Architect",
       avatar: "/images/about/rebhe-ibrahim-web-developer.png",
     },
   },
@@ -148,7 +149,8 @@ export const projects = [
       content:
         "The platform has transformed how we manage our luxury hotel listings. The admin dashboard is incredibly intuitive and gives us full control over everything from bookings to customer inquiries.",
       author: "Rebhe Ibrahim",
-      role: "Portfolio Manager, Luxury Stays Inc.",
+      // role: "Portfolio Manager, Luxury Stays Inc.",
+      role: "Project Lead & Architect",
       avatar: "/images/about/rebhe-ibrahim-web-developer.png",
     },
   },
@@ -223,7 +225,8 @@ export const projects = [
       content:
         "Cinematic has become my go-to for finding new movies. The interface is beautiful and the watchlist feature is exactly what I needed to keep track of films I want to see.",
       author: "Rebhe Ibrahim",
-      role: "Movie Enthusiast",
+      // role: "Movie Enthusiast",
+      role: "Project Lead & Architect",
       avatar: "/images/about/rebhe-ibrahim-web-developer.png",
     },
   },
@@ -298,7 +301,8 @@ export const projects = [
       content:
         "This platform consolidated all our services under one roof. The ability to manage everything from a single admin dashboard has been a game-changer for our business.",
       author: "Rebhe Ibrahim",
-      role: "Operations Manager, Car World",
+      // role: "Operations Manager, Car World",
+      role: "Project Lead & Architect",
       avatar: "/images/about/rebhe-ibrahim-web-developer.png",
     },
   },
@@ -378,7 +382,93 @@ export const projects = [
       content:
         "This project served as a foundational exploration into creating scalable frontend architecture. The result is a robust, maintainable codebase that now serves as a blueprint for future client work.",
       author: "Rebhe Ibrahim",
-      role: "Digital Experience Architect",
+      // role: "Digital Experience Architect",
+      role: "Project Lead & Architect",
+      avatar: "/images/about/rebhe-ibrahim-web-developer.png",
+    },
+  },
+  {
+    id: 6,
+    title: "UniCourse - University Registration & Moodle System",
+    description:
+      "A comprehensive, enterprise-level web platform designed to streamline course registration and academic management for universities, featuring deep Moodle LMS integration.",
+    category: "Business Solutions",
+    challenge:
+      "The goal was to architect a centralized, secure, and user-friendly platform to replace fragmented legacy systems. The key challenge was integrating three distinct user roles (Student, Faculty, Admin) and ensuring seamless data synchronization with Moodle for a cohesive academic experience.",
+    solution:
+      "Developed a full-stack application with a role-based access control system. The platform features a dynamic front-end built with React and React Query for state management, and a robust Node.js (Express) and PostgreSQL back-end to handle complex business logic.",
+    results: [
+      "Delivered a centralized platform for course registration, academic records, and learning management.",
+      "Designed and implemented three distinct, feature-rich dashboards for Students, Faculty, and Administrators.",
+      "Successfully integrated with Moodle for course content, assignments, and grade synchronization.",
+      "Ensured the system is scalable, secure, and accessible, adhering to modern web standards.",
+    ],
+    tech: [
+      "React",
+      "TypeScript",
+      "Node.js (Express)",
+      "PostgreSQL",
+      "React Query",
+      "Tailwind CSS",
+      "Moodle Integration",
+      "Drizzle ORM",
+    ],
+    image: "/images/projects/unicourse/hero.png", // ❗ استخدم صورة لواجهة تسجيل الدخول
+    liveUrl: "#",
+    githubUrl: "#", // ❗ أضف رابط GitHub هنا
+    timeline: "16 Weeks",
+    client: "University Project",
+    keyResults: [
+      {
+        metric: "Role-Based System",
+        value: "3 User Roles",
+        description:
+          "Custom dashboards and permissions for Students, Faculty, and Admins.",
+      },
+      {
+        metric: "Full-Stack Architecture",
+        value: "React & Node.js",
+        description:
+          "A robust and scalable system built with a modern tech stack.",
+      },
+      {
+        metric: "LMS Integration",
+        value: "Moodle",
+        description:
+          "Seamless integration for course materials and grade management.",
+      },
+    ],
+    caseStudySections: [
+      {
+        image: "/images/projects/unicourse/authentication.png", // ❗ استخدم صورة تسجيل الدخول هنا
+        title: "Secure, Role-Based Authentication",
+        description:
+          "The system begins with a secure authentication portal that directs users to one of three distinct interfaces based on their role: Student, Faculty, or Administrator. This ensures a tailored and secure experience from the very first interaction.",
+      },
+      {
+        image: "/images/projects/unicourse/student-grades.png", // ❗ استخدم صورة درجات الطالب هنا
+        title: "A Student-Centric Academic Dashboard",
+        description:
+          "The student experience is centered around a clean, data-rich dashboard. Students can track their academic performance in real-time, view detailed grade breakdowns for each course, manage their schedule, and access Moodle materials, all from one place.",
+      },
+      {
+        image: "/images/projects/unicourse/faculty-dashboard.png", // ❗ استخدم صورة لوحة تحكم المحاضر
+        title: "An Integrated Toolkit for Faculty",
+        description:
+          "Faculty members are equipped with a powerful toolkit to manage their academic tasks efficiently. The dashboard provides tools to oversee their courses, manage student rosters, grade assignments, and communicate with students, centralizing their entire workflow.",
+      },
+      {
+        image: "/images/projects/unicourse/admin-panel.png", // ❗ استخدم صورة لوحة تحكم المدير
+        title: "Comprehensive Admin & System Management",
+        description:
+          "A powerful admin panel provides administrators with full control over the platform, including user management, course creation and scheduling, report generation, and system settings, ensuring smooth university operations.",
+      },
+    ],
+    testimonial: {
+      content:
+        "UniCourse was an ambitious project that showcases the ability to design and implement a complex, enterprise-level system. It demonstrates a deep understanding of full-stack architecture, database management, and user-centric design principles.",
+      author: "Rebhe Ibrahim",
+      role: "Project Lead & Architect",
       avatar: "/images/about/rebhe-ibrahim-web-developer.png",
     },
   },
