@@ -16,6 +16,12 @@ const AboutPage = () => {
     { name: "Performance Optimization", level: 92 },
     { name: "DevOps & Deployment", level: 60 }, // 80
     { name: "Project Management", level: 85 }, // 88
+    /* { name: "Frontend Development (React, Next.js)", level: 95 },
+    { name: "UI/UX Design (Figma, Adobe XD)", level: 90 },
+    { name: "Backend Development (Node.js, Firebase)", level: 85 },
+    { name: "Performance Optimization", level: 92 },
+    { name: "Database Management (PostgreSQL, MongoDB)", level: 85 },
+    { name: "Project Management & Collaboration", level: 90 }, */
   ];
 
   const values = [
@@ -45,50 +51,93 @@ const AboutPage = () => {
     },
   ];
 
+  // const journey = [
+  //   {
+  //     year: "2020",
+  //     title: "Started Coding",
+  //     description:
+  //       "Began my journey with JavaScript and fell in love with web development",
+  //   },
+  //   {
+  //     year: "2021",
+  //     title: "First Client Project",
+  //     description:
+  //       "Delivered my first freelance project - a local business website",
+  //   },
+  //   {
+  //     year: "2022",
+  //     title: "Full-Stack Focus",
+  //     description: "Expanded into backend development and database design",
+  //   },
+  //   {
+  //     year: "2023",
+  //     title: "Agency Partnership",
+  //     description:
+  //       "Started collaborating with design agencies on complex projects",
+  //   },
+  //   {
+  //     year: "2024",
+  //     title: "Enterprise Solutions",
+  //     description:
+  //       "Began working on large-scale applications for enterprise clients",
+  //   },
+  //   {
+  //     year: "2025",
+  //     title: "Digital Architect",
+  //     description:
+  //       "Established myself as a Digital Experience Architect and mentor",
+  //   },
+  // ];
+
+  // --- UPDATED: This journey now reflects your actual CV and timeline ---
   const journey = [
     {
       year: "2020",
-      title: "Started Coding",
+      title: "Began University & Coding Journey",
       description:
-        "Began my journey with JavaScript and fell in love with web development",
+        "Enrolled in Computer Science at Al-Azhar University and started my journey with HTML, CSS, and JavaScript.",
     },
     {
       year: "2021",
-      title: "First Client Project",
+      title: "Launched Freelance Career",
       description:
-        "Delivered my first freelance project - a local business website",
+        "Delivered my first freelance project for a local business while deepening my skills in React and UI/UX design.",
     },
     {
       year: "2022",
-      title: "Full-Stack Focus",
-      description: "Expanded into backend development and database design",
+      title: "Deep Dive into Full-Stack",
+      description:
+        "Expanded into backend development with Node.js and Firebase, and built my first full-stack e-commerce applications.",
     },
     {
       year: "2023",
-      title: "Agency Partnership",
+      title: "Advanced React & Complex Projects",
       description:
-        "Started collaborating with design agencies on complex projects",
+        "Mastered advanced React concepts, including state management with Redux, and began developing complex, data-driven dashboards.",
     },
     {
       year: "2024",
-      title: "Enterprise Solutions",
+      title: "Graduation & Enterprise-Level Projects",
       description:
-        "Began working on large-scale applications for enterprise clients",
+        "Graduated with a Bachelor's in CS and took the lead on 'UniCourse', an enterprise-level university management system.",
     },
     {
       year: "2025",
-      title: "Digital Architect",
+      title: "Established as Digital Experience Architect",
       description:
-        "Established myself as a Digital Experience Architect and mentor",
+        "Solidified my brand by focusing on high-performance architecture, mentoring junior developers, and contributing to the open-source community.",
     },
   ];
 
   return (
     <>
       <SeoComponent
-        title="About Rebhe Ibrahim"
-        description="Learn about my journey as a Digital Experience Architect, my passion for clean code, and how I help businesses transform their digital presence."
-        keywords="About Rebhe Ibrahim, Digital Experience Architect, Web Developer Background, Full-Stack Developer, React Developer, TypeScript"
+        // title="About Rebhe Ibrahim"
+        // description="Learn about my journey as a Digital Experience Architect, my passion for clean code, and how I help businesses transform their digital presence."
+        // // --- UPDATED: SEO keywords are now more specific ---
+        title="About Rebhe Ibrahim | Digital Experience Architect"
+        description="Learn about my journey as a Digital Experience Architect, my passion for clean code, and how I build high-performance web applications."
+        keywords="About Rebhe Ibrahim, Digital Experience Architect, Web Developer Background, Full-Stack Developer, React Developer, TypeScript, Next.js, Performance Optimization, UI/UX"
         schemaType="Person"
         ogImageUrl="/images/about/rebhe-ibrahim-web-developer.png"
       />
@@ -103,14 +152,22 @@ const AboutPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
               <motion.div variants={fadeInUp} className="lg:col-span-3">
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                  Building Digital Experiences That{" "}
-                  <span className="text-blue-500">Matter</span>
+                  {/* Building Digital Experiences That{" "}
+                  <span className="text-blue-500">Matter</span> */}
+                  {/* --- UPDATED: Headline is now consistent with your brand --- */}
+                  Architecting Digital Experiences That{" "}
+                  <span className="text-blue-500">Perform</span>
                 </h1>
                 <p className="text-xl text-gray-400 mb-8 leading-relaxed">
-                  I'm Rebhe Ibrahim, a Digital Experience Architect passionate
+                  {/* I'm Rebhe Ibrahim, a Digital Experience Architect passionate
                   about creating high-performance web applications that solve
                   real business problems and deliver exceptional user
-                  experiences.
+                  experiences. */}
+                  {/* --- UPDATED: Text now reflects your specific brand and experience --- */}
+                  I'm Rebhe Ibrahim, a Digital Experience Architect & Full-Stack
+                  Developer passionate about creating high-performance web
+                  applications that solve business challenges and deliver
+                  exceptional user experiences.
                 </p>
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                   With over 4 years of experience in web development, I
@@ -334,15 +391,21 @@ const AboutPage = () => {
             >
               <h2 className="text-4xl font-bold mb-8">Beyond The Code</h2>
               <p className="text-xl text-gray-400 leading-relaxed mb-8">
-                Outside of work, I enjoy exploring modern design trends,
+                {/* Outside of work, I enjoy exploring modern design trends,
                 contributing to open-source projects, and mentoring junior
                 developers. I believe in giving back to the community that has
-                given me so much.
+                given me so much. */}
+                {/* --- UPDATED: Text is now specific to your achievements --- */}
+                Outside of work, I enjoy giving back to the developer community
+                by creating and sharing open-source guides on GitHub, such as my
+                'Mastering React' and 'GitHub Profile Enhancement' repositories.
+                I also have a passion for mentoring junior developers.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
                 When I'm not coding, you'll find me reading about emerging
                 technologies, experimenting with new frameworks, or enjoying a
-                perfect cup of coffee while planning the next big project.
+                perfect cup of coffee while {/*planning*/}architecting the next
+                big project.
               </p>
             </motion.div>
           </div>
