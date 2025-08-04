@@ -16,18 +16,12 @@ import {
   ShieldCheck,
   Code,
   Users as UsersIcon,
-  ArrowRightLeft,
   Quote,
 } from "lucide-react";
 
 import SeoComponent from "../components/common/SeoComponent";
 import SectionImageDisplay from "../components/projects/SectionImageDisplay";
 import { projects } from "../data/projects";
-
-import {
-  ReactCompareSlider,
-  ReactCompareSliderImage,
-} from "react-compare-slider";
 
 const getIconForMetric = (metric: string) => {
   const lower = metric.toLowerCase();
