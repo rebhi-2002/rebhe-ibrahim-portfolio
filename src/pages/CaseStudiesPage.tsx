@@ -246,7 +246,7 @@ const CaseStudiesPage = () => {
         content:
           "StyleMart is a testament to building a complete, production-ready e-commerce platform. It showcases a deep understanding of both frontend user experience and backend system architecture.",
         author: "Rebhe Ibrahim",
-        role: "CEO, StyleMart",
+        role: "Project Lead & Architect", // role: "CEO, StyleMart",
       },
       githubUrl: "https://github.com/rebhi-2002/shop-smart-builder",
     },
@@ -286,7 +286,8 @@ const CaseStudiesPage = () => {
         content:
           "The platform has transformed how we manage our luxury hotel listings. The admin dashboard is incredibly intuitive and gives us full control over everything from bookings to customer inquiries.",
         author: "Maria Garcia",
-        role: "Portfolio Manager, Luxury Stays Inc.",
+        // role: "Portfolio Manager, Luxury Stays Inc.",
+        role: "Project Lead & Architect",
       },
       githubUrl: "https://github.com/rebhi-2002/Graduation--Project",
     },
@@ -329,7 +330,8 @@ const CaseStudiesPage = () => {
         content:
           "Cinematic has become my go-to for finding new movies. The interface is beautiful and the watchlist feature is exactly what I needed to keep track of films I want to see.",
         author: "Rebhe Ibrahim",
-        role: "Movie Enthusiast",
+        // role: "Movie Enthusiast",
+        role: "Project Lead & Architect",
       },
       githubUrl: "https://github.com/rebhi-2002/Cinematic",
     },
@@ -369,7 +371,8 @@ const CaseStudiesPage = () => {
         content:
           "This platform consolidated all our services under one roof. The ability to manage rentals, parts inventory, and service appointments from a single admin dashboard has been a game-changer for our business.",
         author: "Rebhe Ibrahim",
-        role: "Operations Manager, Car World",
+        // role: "Operations Manager, Car World",
+        role: "Project Lead & Architect",
       },
       githubUrl:
         "https://github.com/Golex-AI-Apps/webapp-gmvjh6vvv6lrepw6iidru",
@@ -408,9 +411,54 @@ const CaseStudiesPage = () => {
         content:
           "This project served as a foundational exploration into creating scalable frontend architecture with React. The result is a robust, maintainable codebase that now serves as a blueprint for future client work.",
         author: "Rebhe Ibrahim",
-        role: "Digital Experience Architect",
+        // role: "Digital Experience Architect",
+        role: "Project Lead & Architect",
       },
       githubUrl: "https://github.com/rebhi-2002/FastBite",
+    },
+    {
+      id: 6,
+      title: "UniCourse - University Registration & Moodle System",
+      category: "Business Solutions",
+      description:
+        "A comprehensive, enterprise-level web platform designed to streamline course registration and academic management for universities, featuring deep Moodle LMS integration.",
+      image: "/images/projects/unicourse/hero.png",
+      metrics: [
+        { icon: Users, label: "Role-Based System", value: "3 User Roles" },
+        {
+          icon: Zap,
+          label: "Full-Stack Architecture",
+          value: "React & Node.js",
+        },
+        { icon: TrendingUp, label: "LMS Integration", value: "Moodle" },
+      ],
+      tech: [
+        "React",
+        "TypeScript",
+        "Node.js (Express)",
+        "PostgreSQL",
+        "React Query",
+        "Tailwind CSS",
+        "Moodle Integration",
+        "Drizzle ORM",
+      ],
+      challenge:
+        "The goal was to architect a centralized, secure, and user-friendly platform to replace fragmented legacy systems. The key challenge was integrating three distinct user roles (Student, Faculty, Admin) and ensuring seamless data synchronization with Moodle for a cohesive academic experience.",
+      solution:
+        "Developed a full-stack application with a role-based access control system. The platform features a dynamic front-end built with React and React Query for state management, and a robust Node.js (Express) and PostgreSQL back-end to handle complex business logic.",
+      results: [
+        "Delivered a centralized platform for course registration, academic records, and learning management.",
+        "Designed and implemented three distinct, feature-rich dashboards for Students, Faculty, and Administrators.",
+        "Successfully integrated with Moodle for course content, assignments, and grade synchronization.",
+        "Ensured the system is scalable, secure, and accessible, adhering to modern web standards.",
+      ],
+      testimonial: {
+        content:
+          "UniCourse was an ambitious project that showcases the ability to design and implement a complex, enterprise-level system. It demonstrates a deep understanding of full-stack architecture, database management, and user-centric design principles.",
+        author: "Rebhe Ibrahim",
+        role: "Project Lead & Architect",
+      },
+      githubUrl: "https://github.com/rebhi-2002/UniversityCoursePortal",
     },
   ];
 
