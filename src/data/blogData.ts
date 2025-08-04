@@ -13,6 +13,17 @@
 // import StateManagementDeepDive from "./articles/react-state-management-deep-dive-2025";
 // import React19Next15Guide from "./articles/react-19-next-15-guide";
 
+// const modules = import.meta.glob("./articles/*.tsx", { eager: true });
+
+// export const articlesData = Object.entries(modules).map(([path, mod]) => {
+//   const slug = path.split("/").pop()?.replace(".tsx", "") || "";
+//   const metadata = (mod as { metadata: Omit<Article, "slug" | "id"> }).metadata;
+//   return {
+//     slug,
+//     ...metadata,
+//   };
+// });
+
 export interface Author {
   name: string;
   avatar: string;
