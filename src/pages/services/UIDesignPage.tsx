@@ -205,7 +205,7 @@ const UIDesignPage = () => {
         description="Professional UI/UX design services focused on creating intuitive, accessible, and beautiful digital experiences. From user research to high-fidelity prototypes."
         keywords="UI/UX Design, User Experience Design, User Interface Design, Figma Design, Responsive Design, Accessibility Design"
         schemaType="WebSite"
-        ogImageUrl="/images/services/ui-design-og.jpg"
+        ogImageUrl="/images/services/ui-design-og.png"
       />
 
       <motion.div
