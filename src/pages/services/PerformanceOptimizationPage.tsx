@@ -213,7 +213,7 @@ const PerformanceOptimizationPage = () => {
         description="Professional web performance optimization services. Improve Core Web Vitals, reduce load times, and boost user engagement with expert performance tuning."
         keywords="Performance Optimization, Core Web Vitals, Website Speed Optimization, Bundle Size Reduction, LCP Optimization, Web Performance"
         schemaType="WebSite"
-        ogImageUrl="/images/services/performance-optimization-og.jpg"
+        ogImageUrl="/images/services/performance-optimization-og.png"
       />
 
       <motion.div
