@@ -166,7 +166,7 @@ const FullStackDevelopmentPage = () => {
         description="Professional full-stack web development services using React, Node.js, and modern technologies. From concept to deployment, I build scalable applications that drive business growth."
         keywords="Full-Stack Development, React Development, Node.js, Web Application Development, Custom Software Development, API Development"
         schemaType="WebSite"
-        ogImageUrl="/images/services/full-stack-development-og.jpg"
+        ogImageUrl="/images/services/full-stack-development-og.png"
       />
 
       <motion.div
