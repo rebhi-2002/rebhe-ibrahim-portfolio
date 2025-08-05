@@ -324,3 +324,8 @@ npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.5.1
 npm notice To update run: npm install -g npm@11.5.1
 npm notice
 PS D:\Project\Brand> 
+
+─────────────────────
+>>>>>>>> "D:\My_Github\rebhe-ibrahim-portfolio\src\data\projects.ts"
+> تكرار المشاريع projects في أكثر من مكون مثل: CaseStudiesPage.tsx بمصفوفة const projects = [....]; وبصفحة HomePage.tsx .....
+
