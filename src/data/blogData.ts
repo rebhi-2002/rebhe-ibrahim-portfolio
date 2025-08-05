@@ -12,6 +12,7 @@
 // import FrontendTechStackGuide from "./articles/frontend-tech-stack-2025-the-complete-guide";
 // import StateManagementDeepDive from "./articles/react-state-management-deep-dive-2025";
 // import React19Next15Guide from "./articles/react-19-next-15-guide";
+// import ApiDataFetchingGuide from "./articles/api-data-fetching-react-guide";
 
 // const modules = import.meta.glob("./articles/*.tsx", { eager: true });
 
@@ -237,6 +238,44 @@ export const articlesData: Article[] = [
     tags: ["React 19", "Next.js 15", "React Compiler", "Server Actions", "PPR"],
     author: defaultAuthor,
     // contentComponent: React19Next15Guide,
+    readTime: "14 min",
+  },
+  {
+    id: 11,
+    slug: "api-data-fetching-react-guide",
+    title: "API & Data Fetching in React: The Complete Guide",
+    excerpt:
+      "From the classic useEffect to the power of React Query and SWR, this guide covers the best strategies for managing server state in modern React applications.",
+    category: "React & Ecosystem",
+    publishDate: "2025-08-05",
+    image: "/images/articles/api-data-fetching-react-guide-header.png",
+    featured: false,
+    tags: ["React", "API", "Data Fetching", "React Query", "SWR", "useEffect"],
+    author: defaultAuthor,
+    // contentComponent: ApiDataFetchingGuide,
+    readTime: "14 min",
+  },
+  {
+    id: 12,
+    slug: "react-styling-and-ui-components-guide",
+    title: "The Ultimate Guide to Styling & UI Components in React",
+    excerpt:
+      "From Tailwind CSS and CSS-in-JS to component libraries like Shadcn/ui and MUI, we explore the best strategies for building beautiful and maintainable React UIs.",
+    category: "CSS & Design",
+    publishDate: "2025-08-05",
+    image: "/images/articles/react-styling-ui-components-header.png",
+    featured: false,
+    tags: [
+      "React",
+      "CSS",
+      "Styling",
+      "Tailwind CSS",
+      "UI Components",
+      "MUI",
+      "Shadcn/ui",
+    ],
+    author: defaultAuthor,
+    // contentComponent: StylingAndUiComponentsGuide,
     readTime: "14 min",
   },
 ];
