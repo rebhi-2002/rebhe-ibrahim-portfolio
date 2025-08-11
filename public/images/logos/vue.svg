@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 221" width="40" height="40" preserveAspectRatio="xMidYMid meet">
+  <title>Vue Logo</title>
+  <path d="M204.8,0L256,0L128,220.8L0,0L51.2,0L128,132.48L204.8,0Z" fill="#41B883"/>
+  <path d="M0,0L128,220.8L256,0H204.8L128,132.48L51.2,0H0Z" fill="#41B883"/>
+  <path d="M51.2,0L128,132.48L204.8,0H153.6L128,51.2L102.4,0H51.2Z" fill="#35495E"/>
+</svg>

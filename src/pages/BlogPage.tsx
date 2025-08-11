@@ -31,7 +31,7 @@ const BlogPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const articlesGridRef = useRef<HTMLDivElement>(null);
-  const articlesPerPage = 7;
+  const articlesPerPage = 6;
 
   const navigate = useNavigate();
   const location = useLocation();

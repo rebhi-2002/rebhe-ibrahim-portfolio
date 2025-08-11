@@ -278,6 +278,59 @@ export const articlesData: Article[] = [
     // contentComponent: StylingAndUiComponentsGuide,
     readTime: "14 min",
   },
+  {
+    id: 13,
+    slug: "the-essential-guide-to-react-testing",
+    title: "The Essential Guide to Testing in React (2025 Edition)",
+    excerpt:
+      "From unit testing with Vitest & RTL to end-to-end with Playwright, this guide covers the modern tools and strategies to ensure your React applications are bug-free and reliable.",
+    category: "Pro Practices",
+    publishDate: "2025-08-10",
+    image: "/images/articles/react-testing-tools-guide-header.png",
+    featured: false,
+    tags: [
+      "React",
+      "Testing",
+      "Vitest",
+      "Jest",
+      "Playwright",
+      "Cypress",
+      "RTL",
+    ],
+    author: defaultAuthor,
+    // contentComponent: ReactTestingGuide, // سنقوم بإنشاء هذا المكون
+    readTime: "12 min",
+  },
+  {
+    id: 14,
+    slug: "react-vs-vue-vs-svelte-framework-showdown",
+    title: "React vs. Vue vs. Svelte: The 2025 Framework Showdown",
+    excerpt:
+      "A deep-dive comparison of the three leading component-based libraries. We analyze philosophy, performance, and developer experience to help you choose.",
+    category: "React & Ecosystem",
+    publishDate: "2025-08-11",
+    image: "/images/articles/react-vs-vue-vs-svelte-header.png",
+    featured: false,
+    tags: ["React", "Vue", "Svelte", "Frameworks", "Comparison", "JavaScript"],
+    author: defaultAuthor,
+    // contentComponent: FrameworksShowdown, // سنقوم بإنشاء هذا المكون
+    readTime: "15 min",
+  },
+  {
+    id: 15,
+    slug: "build-tools-showdown-vite-vs-webpack",
+    title: "Build Tools Showdown: Vite vs. Webpack in 2025",
+    excerpt:
+      "A deep dive into the two giants of frontend build tools. We compare speed, developer experience, and configuration to help you choose the right bundler for your project.",
+    category: "Pro Practices",
+    publishDate: "2025-08-11",
+    image: "/images/articles/build-tools-vite-vs-webpack-header.png",
+    featured: false,
+    tags: ["Build Tools", "Vite", "Webpack", "Performance", "DX", "Migration"],
+    author: defaultAuthor,
+    // contentComponent: BuildToolsShowdown, // سنقوم بإنشاء هذا المكون
+    readTime: "15 min",
+  },
 ];
 
 export const recommendedReadsData = [
